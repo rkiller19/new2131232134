@@ -24,7 +24,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import useBombFinance from '../../hooks/useBombFinance';
 import { ReactComponent as IconTelegram } from '../../assets/img/telegram.svg';
 
-import BombImage from '../../assets/img/grape.png';
+import BombImage from '../../assets/img/cream.png';
 
 import HomeImage from '../../assets/img/background.jpg';
 const BackgroundImage = createGlobalStyle`
@@ -53,8 +53,8 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
-  const bombFtmLpStats = useLpStatsBTC('GRAPE-MIM-LP');
-  const bShareFtmLpStats = useLpStats('WINE-AVAX-LP');
+  const bombFtmLpStats = useLpStatsBTC('CREAM-MIM-LP');
+  const bShareFtmLpStats = useLpStats('CSHARE-AVAX-LP');
   const bombStats = useBombStats();
   const bShareStats = usebShareStats();
   const tBondStats = useBondStats();
@@ -70,8 +70,8 @@ const Home = () => {
     bShare = bShareProd;
   }
 
-  const buyBombAddress = 'https://traderjoexyz.com/#/trade?inputCurrency=0x130966628846bfd36ff31a822705796e8cb8c18d&outputCurrency=0x5541d83efad1f281571b343977648b75d95cdac2';
-  const buyBShareAddress = 'https://traderjoexyz.com/#/trade?inputCurrency=0x859b0921b783874175701fe06393f736535d5074&outputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7';
+  const buyBombAddress = 'https://traderjoexyz.com/#/trade';
+  const buyBShareAddress = 'https://traderjoexyz.com/#/trade';
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bshareLPStats = useMemo(() => (bShareFtmLpStats ? bShareFtmLpStats : null), [bShareFtmLpStats]);
   const bombPriceInDollars = useMemo(
@@ -151,34 +151,35 @@ const Home = () => {
         <Grid item xs={12} sm={8}>
           <Paper>
             <Box p={4} style={{ textAlign: 'center' }}>
-              <h2>Welcome to Grape Finance</h2>
+              <h2>Welcome to IceCream Finance</h2>
               <p style={{ fontSize: '17px' }}>
-               <b>GRAPE is an algorithmic stable coin designed to maintain a 1:1 peg to MIM.</b>
+               <b>$CREAM A next-generation algo stable to cure your sweet-tooth on the Avalanche Network</b>
                 
                 
               </p>
               <p style={{ fontSize: '17px' }}>
-              The protocol incentivizes the peg through high daily yields normally only found
-                with volatile risk assets but with Grape you get this by staking a USD pegged coin instead!
+              Our inspiration for starting this protocol came from two simple words INTEGRITY and TRANSPARENCY. Starting off as investors ourselves we noticed that DeFi as a whole, 
+              is moving in the wrong direction. Many projects end up either rugging or failing because many dont realise that DeFi's success is built with a strong community. 
+              We plan to stand side by side with our investors through thick and thin and deliver the sweetest protocol to #AVAX.
                 {/* Stake your BOMB-BTC LP in the Farm to earn BSHARE rewards. Then stake your earned BSHARE in the
                 Boardroom to earn more BOMB! */}
               </p>
               <p>
                 Join our{' '}
                 <a
-                  href="https://t.me/GrapeDefi"
+                  href="https://t.me/icecreamfinance"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style={{ color: '#000' }}
+                  style={{ color: '#89CFF0' }}
                 >
                   Telegram
                 </a>{' '} or {' '}
                 
                 <a
-                  href="https://discord.gg/ZP9aYaXeCJ"
+                  href="https://discord.gg/icecream"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style={{ color: '#000' }}
+                  style={{ color: '#89CFF0' }}
                 >
                   Discord
                 </a>{' '}
@@ -194,7 +195,7 @@ const Home = () => {
           <Grid item xs={12} sm={12} justify="center" style={{ margin: '12px', display: 'flex' }}>
 
            <Alert variant="filled" severity="info"> 
-              Genesis Pools have launched! Read our <a link="_blank" href="https://grapefinance.gitbook.io/grape-finance-docs/">docs</a> for more info and to confirm contract addresses.
+              Please read our <a link="_blank" href="https://icecreamfinancial.gitbook.io/icecream-finance/">documentation</a> for more info before purchasing CREAM or CSHARE tokens!.
             </Alert>
 
           </Grid>
@@ -228,7 +229,7 @@ const Home = () => {
                 style={{ margin: '10px' }}
                 className={'shinyButton ' + classes.button}
               >
-                Buy GRAPE
+                Buy CREAM
               </Button>
               <Button
                 target="_blank"
@@ -236,75 +237,81 @@ const Home = () => {
                 className={'shinyButton ' + classes.button}
                 style={{ marginLeft: '10px' }}
               >
-                Buy WINE
+                Buy CSHARE
               </Button>
             </CardContent>
           </Card>
         </Grid>
 
-        {/* BOMB */}
+        {/* CREAM or BOMB */}
         <Grid item xs={12} sm={4}>
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
+              <Box mt={2}>
+              <h2 style={{ marginBottom: '10px' }}>CREAM</h2>
+              </Box>
+              <Button
+                onClick={() => {
+                  bombFinance.watchAssetInMetamask('BOMB');
+                }}
+                style={{ position: 'absolute', top: '10px', right: '10px', border: 'transparent', color: 'white' }}
+              >
+                {' '}
+                <b>+</b>&nbsp;&nbsp;
+                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(0%)' }} src={MetamaskFox} />
+              </Button>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BOMB" />
                 </CardIcon>
               </Box>
-              {/*<Button
-                onClick={() => {
-                  bombFinance.watchAssetInMetamask('BOMB');
-                }}
-                style={{ position: 'absolute', top: '10px', right: '10px', border: '1px grey solid' }}
-              >
-                {' '}
-                <b>+</b>&nbsp;&nbsp;
-                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(100%)' }} src={MetamaskFox} />
-              </Button>*/}
-              <h2 style={{ marginBottom: '10px' }}>GRAPE</h2>
-              
-              <Box>
-                <span style={{ fontSize: '30px', color: '#930993' }}>${bombPriceInBNB ? bombPriceInBNB : '-.----'} </span>
-              </Box>             
-              <span style={{ fontSize: '17px' }}>
-                Market Cap: ${roundAndFormatNumber(bombCirculatingSupply * bombPriceInDollars, 2)} <br />
-                Circulating Supply: {roundAndFormatNumber(bombCirculatingSupply, 2)} <br />
-                Total Supply: {roundAndFormatNumber(bombTotalSupply, 2)}
-            </span>
+              <span style={{ fontSize: '25px' }}>
+              Current Price
+              </span>
+              <Box>             
+               <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
+                  ${bombPriceInDollars ? bombPriceInDollars : '-.--'} USD
+                </span>
+              </Box>
+              <span style={{ fontSize: '15px' }}>
+                Circulating Supply: {bombCirculatingSupply} <br />
+                Total Supply: {bombTotalSupply} 
+              </span>
             </CardContent>
           </Card>
         </Grid>
 
-        {/* BSHARE */}
+        {/* CSHARE /BSHARE */}
         <Grid item xs={12} sm={4}>
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
-              {/*<Button
+            <Box mt={2}>
+              <h2 style={{ marginBottom: '10px' }}>CSHARE</h2>
+              </Box>
+              <Button
                 onClick={() => {
                   bombFinance.watchAssetInMetamask('BSHARE');
                 }}
-                style={{ position: 'absolute', top: '10px', right: '10px', border: '1px grey solid' }}
+                style={{ position: 'absolute', top: '10px', right: '10px', border: 'transparent', color: 'white' }}
               >
                 {' '}
                 <b>+</b>&nbsp;&nbsp;
-                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(100%)' }} src={MetamaskFox} />
-              </Button>*/}
+                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(0%)' }} src={MetamaskFox} />
+              </Button>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BSHARE" />
                 </CardIcon>
               </Box>
-              <h2 style={{ marginBottom: '10px' }}>WINE</h2>
-              
+              <span style={{ fontSize: '25px' }}>
+              Current Price
+              </span>
               <Box>
-                <span style={{ fontSize: '30px', color: '#930993' }}>
-                  ${bSharePriceInDollars ? bSharePriceInDollars : '-.--'}
+                <span style={{ fontSize: '30px', alignContent:'flex-start' }}>
+                  ${bSharePriceInDollars ? bSharePriceInDollars : '-.--'} USD
                 </span>
               </Box>
-              
-             <span style={{ fontSize: '17px' }}>
-                Market Cap: ${roundAndFormatNumber((bShareCirculatingSupply * bSharePriceInDollars).toFixed(2), 2)}{' '}
-                <br />
+             <span style={{ fontSize: '15px' }}>
                 Circulating Supply: {roundAndFormatNumber(bShareCirculatingSupply, 2)} <br />
                 Total Supply: {roundAndFormatNumber(bShareTotalSupply, 2)}
             </span>
@@ -312,34 +319,37 @@ const Home = () => {
           </Card>
         </Grid>
 
-        {/* BBOND */}
+        {/* CBOND */}
         <Grid item xs={12} sm={4}>
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
-              {/*<Button
+            <Box mt={2}>
+              <h2 style={{ marginBottom: '10px' }}>CBOND</h2>
+              </Box>
+              <Button
                 onClick={() => {
                   bombFinance.watchAssetInMetamask('BBOND');
                 }}
-                style={{ position: 'absolute', top: '10px', right: '10px', border: '1px grey solid' }}
+                style={{ position: 'absolute', top: '10px', right: '10px', border: 'transparent', color: 'white' }}
               >
                 {' '}
                 <b>+</b>&nbsp;&nbsp;
-                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(100%)' }} src={MetamaskFox} />
-              </Button>*/}
+                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(0%)' }} src={MetamaskFox} />
+              </Button>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BBOND" />
                 </CardIcon>
               </Box>
-              <h2 style={{ marginBottom: '10px' }}>GBOND</h2>
-        
+              <span style={{ fontSize: '25px' }}>
+              Current Price
+              </span>
               <Box>
-                <span style={{ fontSize: '30px', color: '#930993' }}>
-                 $ {tBondPriceInDollars ? tBondPriceInDollars : '-.--'}
+                <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
+                 $ {tBondPriceInDollars ? tBondPriceInDollars : '-.--'} USD
                 </span>
               </Box>
-              <span style={{ fontSize: '17px' }}>
-                Market Cap: ${roundAndFormatNumber((tBondCirculatingSupply * tBondPriceInDollars).toFixed(2), 2)} <br />
+              <span style={{ fontSize: '15px' }}>
                 Circulating Supply: {roundAndFormatNumber(tBondCirculatingSupply, 2)} <br />
                 Total Supply: {roundAndFormatNumber(tBondTotalSupply, 2)}
             </span>
@@ -350,25 +360,28 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
+            <Box mt={2}>
+              <h2 style={{ marginBottom: '10px' }}>CREAM-AVAX LP</h2>
+              </Box>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BOMB-BTCB-LP" />
                 </CardIcon>
               </Box>
-              <h2>GRAPE-MIM TraderJoe LP</h2>
               <Box mt={2}>
                {/*<Button disabled onClick={onPresentBombZap} className="shinyButtonDisabledSecondary">
                   Zap In
             </Button>*/}
               </Box>
-              <Box mt={2}>
-                <span style={{ fontSize: '26px', color: '#930993'  }}>
-                  {bombLPStats?.tokenAmount ? bombLPStats?.tokenAmount : '-.--'} GRAPE /{' '}
-                  {bombLPStats?.ftmAmount ? bombLPStats?.ftmAmount : '-.--'} MIM
-                </span>
+              <span style={{ fontSize: '25px' }}>
+              Current Price
+              </span>
+              <Box>
+              <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
+              ${bombLPStats?.priceOfOne ? bombLPStats.priceOfOne : '-.--'} USD
+              </span>
               </Box>
-              <Box>${bombLPStats?.priceOfOne ? bombLPStats.priceOfOne : '-.--'}</Box>
-              <span style={{ fontSize: '17px' }}>
+              <span style={{ fontSize: '15px' }}>
                 Liquidity: ${bombLPStats?.totalLiquidity ? roundAndFormatNumber(bombLPStats.totalLiquidity, 2) : '-.--'}{' '}
                 <br />
                 Total Supply: {bombLPStats?.totalSupply ? roundAndFormatNumber(bombLPStats.totalSupply, 2) : '-.--'}
@@ -379,25 +392,28 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
+            <Box mt={2}>
+              <h2 style={{ marginBottom: '10px' }}>CSHARE-AVAX LP</h2>
+              </Box>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BSHARE-BNB-LP" style="width:105px;" />
                 </CardIcon>
               </Box>
-              <h2>WINE-AVAX TraderJoe LP</h2>
               <Box mt={2}>
                 {/*<Button onClick={onPresentBshareZap} className="shinyButtonSecondary">
                   Zap In
             </Button>*/}
               </Box>
-              <Box mt={2}>
-                <span style={{ fontSize: '26px', color: '#930993' }}>
-                  {bshareLPStats?.tokenAmount ? bshareLPStats?.tokenAmount : '-.--'} WINE /{' '}
-                  {bshareLPStats?.ftmAmount ? bshareLPStats?.ftmAmount : '-.--'} AVAX
-                </span>
+              <span style={{ fontSize: '25px' }}>
+              Current Price
+              </span>
+              <Box>
+              <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
+              ${bshareLPStats?.priceOfOne ? bshareLPStats.priceOfOne : '-.--'} USD
+              </span>
               </Box>
-              <Box>${bshareLPStats?.priceOfOne ? bshareLPStats.priceOfOne : '-.--'}</Box>
-              <span style={{ fontSize: '17px' }}>
+              <span style={{ fontSize: '15px' }}>
                 Liquidity: $
                 {bshareLPStats?.totalLiquidity ? roundAndFormatNumber(bshareLPStats.totalLiquidity, 2) : '-.--'}
                 <br />

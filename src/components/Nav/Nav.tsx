@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    color: '#322f32',
-    'background-color': 'rgba(255,255,255,0.0) !important',
-    // borderBottom: `1px solid ${theme.palette.divider}`,
+    color: '#000',
+    'background-color': 'rgba(255,255,255,0.1) !important',
+    borderBottom: `1px solid ${theme.palette.divider}`,
     padding: '10px',
     marginBottom: '3rem',
   },
@@ -129,16 +129,16 @@ const Nav = () => {
               </Link>
               
               <Link to="/farm" className={'navLink ' + classes.link}>
-                Vineyard
+                Creamery
               </Link>
-              <a href="https://grapefinance.gitbook.io/grape-finance-docs/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
-                Docs
+              <a href="https://icecreamfinancial.gitbook.io/icecream-finance/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
+                Documents
               </a>
               {/*<Link to="/boardroom" className={'navLink ' + classes.link}>
-                Winery
+                Factory
               </Link>
               <Link to="/bond" className={'navLink ' + classes.link}>
-                Bond
+                Maintenance
               </Link>
 
                <Link color="textPrimary" to="/sbs" className={classes.link}>
@@ -150,7 +150,7 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> 
-              <a href="https://app.gitbook.com/s/NUqRuqfjnQX78cGRsBTc/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
+              <a href="https://icecreamfinancial.gitbook.io/icecream-finance/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
                 Docs
               </a>
                 <a href="https://bomb.farm" className={'navLink ' + classes.link} rel="noopener" target="_blank">
@@ -223,13 +223,13 @@ const Nav = () => {
                   <AccountButton text="Connect" />
                 </ListItem>
                 <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Vineyard" to="/farm" />
-                <ListItem button component="a" href="https://grapefinance.gitbook.io/grape-finance-docs/">
-                  <ListItemText>Docs</ListItemText>
+                <ListItemLink primary="Creamery" to="/farm" />
+                <ListItem button component="a" href="https://icecreamfinancial.gitbook.io/icecream-finance/">
+                  <ListItemText>Documents</ListItemText>
                   </ListItem>
                 
-                {/*<ListItemLink primary="Boardroom" to="/boardroom" />
-                <ListItemLink primary="Bond" to="/bond" />
+                {/*<ListItemLink primary="Factory" to="/boardroom" />
+                <ListItemLink primary="Maintenance" to="/bond" />
                  <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
                 {/* <ListItemLink primary="Regulations" to="/regulations" /> 

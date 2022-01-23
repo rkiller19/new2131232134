@@ -29,7 +29,7 @@ const LaunchCountdown: React.FC<LaunchCountdownProps> = ({deadline, description,
   return (
     <StyledCard>
         <StyledCountdownWrapper>
-          <StyledCountdownTitle>Grape Rewards Pools Starts</StyledCountdownTitle>
+          <StyledCountdownTitle>Genesis Rewards Pools Starts</StyledCountdownTitle>
           <Countdown date={deadline} renderer={countdownRenderer} />
         </StyledCountdownWrapper>
     </StyledCard>

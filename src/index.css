@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'superstar';
-  src: local('superstar'), url('./fonts/superstar.ttf') format('truetype');
-}
+  font-family: "superstar";
+  src: local("superstar"),url("./fonts/superstar.ttf") format("truetype");
+  }
+  
 
 body,
 html,
@@ -10,10 +11,7 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-family: 'MONOSPACE', sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
+  font-family: 'Poppins', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,86 +22,108 @@ body {
   height: 100%;
 }
 
-/* .makeStyles-paper-11, */
-/* .makeStyles-paper-11 h2, */
-/* .MuiTypography-body1,
-.MuiPaper-root, */
-h2 {
-  color: #930993 !important;
-  font-size: 2.5em;
+.makeStyles-paper-11,
+.makeStyles-paper-11 h2,
+.MuiPaper-root h2,
+.MuiTypography-body1{
+color:#fff!important
 }
 
 body {
   font-size: 1em;
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-position: center center !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
+  background-position:50%!important;
+  background-attachment:fixed!important;
+  background-size:cover!important
 }
 
+
 h1,
-h2,
+h2{
+  -webkit-align-items:center;
+  align-items:center;
+  color: #fff !important
+  
+}
+
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'superstar', 'monospace';
-  text-transform: uppercase;
-  color: #fff;
+    font-family:"Amarante", cursive!important
+    
+}
+
+.MuiCardContent-root:last-child {
+  padding-bottom:24px
+}
+
+.MuiGrid-spacing-xs-3 > .MuiGrid-item{
+  padding: 12px
+}
+
+
+.MuiCardContent-root{
+  padding:16px
 }
 
 .MuiToolbar-regular {
   color: #000;
 }
 
-.MuiButton-containedPrimary,
+.MuiButton-containedPrimary{
+  color:#fff!important
+}
 .MuiButton-containedPrimary:hover,
 .MuiListItem-button:hover,
 .MuiButtonBase-root:hover {
-  color: #fff !important;
-}
-.MuiButton-containedPrimary{
-  background: #930993 !important;
+  color: #000 !important;
 }
 
-.MuiButton-containedPrimary:hover{
-  background: #D19AFF !important;
+.MuiGrid-item{
+  margin: 0;
+  box-sizing: border-box;
 }
 
 code {
-  font-family: 'monospace', monospace;
+  font-family:source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
 }
 
 .wallet-button {
-  color: #fff;
-  font-family: 'monospace', sans-serif !important;
-  font-size: 1.2rem !important;
-  text-align: left !important;
-  justify-content: flex-start !important;
-  text-transform: none !important;
+  color:#fff!important;
+  font-family:"Poppins",sans-serif!important;
+  font-size:1.1rem!important;
+  text-align:left!important;
+  -webkit-justify-content:flex-start!important;
+  justify-content:flex-start!important;
+  text-transform:none!important
 }
 .wallet-button:hover {
-  color: #930993 !important;
+  background-color:#000!important;
+  color:#fff!important
 }
 
 .navLink {
-  color: #fff !important;
+  color: #ffffff !important;
+  font-weight: bold;
+
 }
 
 .navLink:hover {
-  color: #930993 !important;
+  color: #1b75ea !important;
 }
 
 .shinyButton {
   margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #930993 !important;
+  background-color: #1B3DEA !important;
   border-radius: 15px;
   font-size: 1rem !important;
   padding-left: 5px;
@@ -118,12 +138,12 @@ code {
 }
 
 .shinyButton:hover {
-  background-color: #72046d !important;
+  background-color: #1ba8ea !important;
   color: #fff !important;
 }
 
 /*
-#930993 light
+#1B3DEA light
 #72046D dark
 #322f32 black/grey
 #FFD2D1 background highlight
@@ -137,19 +157,9 @@ code {
   border-radius: 15px;
   font-size: 1rem !important;
   padding-left: 5px;
-  background-color: #930993 !important;
+  background-color: #1B3DEA !important;
   color: #fff !important;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
-}
-
-.account {
-  display: flex;
-  align-items: center;
-}
-
-.account > img,
-.account > div {
-  margin-right: 8px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
 }
 
 .shinyButtonDisabledSecondary {
@@ -160,7 +170,7 @@ code {
 }
 
 .shinyButtonSecondary:hover {
-  background-color: #72046d !important;
+  background-color: #1ba8ea !important;
   color: #fff !important;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
 }
@@ -182,35 +192,87 @@ code {
 }
 
 .bomb {
-  background-image: url('/grape.png');
-  top: -20px;
+  background-image: url('/cream.png');
+  top:-20px;
 }
 
 .bshare {
-  background-image: url('/gshare.png');
+  background-image: url('/cshare.png');
 }
 
 .btc {
   background-image: url('/bomb3.png');
 }
-
-.MuiPaper-root {
-  color: #322f32 !important;
-  background-color: rgba(255, 255, 255, 0.8) !important;
+.MuiPaper-root{
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px)!important;
+  -webkit-box-shadow: 10px 22px 33px 0px rgba(0,0,0,0.58)!important;
+  -moz-box-shadow: 10px 22px 33px 0px rgba(0,0,0,0.58)!important;
+  box-shadow: 10px 22px 33px 0px rgba(0,0,0,0.58)!important;
 }
 
-.MuiAppBar-positionSticky {
+.MuiAlert-filledWarning{
+  color: #fff;
+  font-weight: 500;
+  background-color: #2196f3
+}
+
+.MuiAlert-root{
+  display: flex;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.MuiPaper-elevation0{
+  box-shadow: none;
+}
+.MuiBox-root-18{
+  line-height:75px!important
+}
+
+.MuiBox-root-24{
+  line-height:75px!important
+}
+
+.MuiBox-root-30{
+  line-height:75px!important
+}
+
+.MuiBox-root-46{
+  line-height:75px!important
+}
+
+.MuiBox-root-38{
+  line-height:75px!important
+}
+
+.MuiPaper-elevation1{
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 
+  0px 1px 1px 0px rgb(0 0 0 / 14%), 
+  0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.MuiPaper-rounded{
+  border-radius:4px
+}
+
+.MuiAppBar-positionSticky{
   position: relative !important;
 }
-.ijwpow {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+.ijwpow{
+  background-color: rgba(255,255,255,0.1) !important;
 }
-.makeStyles-appBar-2 {
+.makeStyles-appBar-2{
   background-color: rgba(255, 255, 255, 0) !important;
 }
-.walletconnecttitle {
+.walletconnecttitle{
   color: #322f32;
 }
-.walletconnecttitle:hover {
-  color: #930993;
+.walletconnecttitle:hover{
+  color: #1B3DEA;
 }

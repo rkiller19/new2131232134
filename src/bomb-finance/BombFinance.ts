@@ -148,8 +148,8 @@ export class BombFinance {
     const lpTokenSupplyBN = await lpToken.totalSupply();
     
     const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    const token0 = name.startsWith('GRAPE') ? this.BOMB : this.BSHARE;
-    const isBomb = name.startsWith('GRAPE');
+    const token0 = name.startsWith('CREAM') ? this.BOMB : this.BSHARE;
+    const isBomb = name.startsWith('CREAM');
     const tokenAmountBN = await token0.balanceOf(lpToken.address);
     const tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
@@ -177,8 +177,8 @@ export class BombFinance {
 
     const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
     
-    const token0 = name.startsWith('GRAPE') ? this.BOMB : this.BSHARE;
-    const isBomb = name.startsWith('GRAPE');
+    const token0 = name.startsWith('CREAM') ? this.BOMB : this.BSHARE;
+    const isBomb = name.startsWith('CREAM');
     
     const tokenAmountBN = await token0.balanceOf(lpToken.address);
     
@@ -303,7 +303,7 @@ export class BombFinance {
     
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
     
-    const stat = bank.earnTokenName === 'GRAPE' ? await this.getBombStat() : await this.getShareStat();
+    const stat = bank.earnTokenName === 'CREAM' ? await this.getBombStat() : await this.getShareStat();
     
     const tokenPerSecond = await this.getTokenPerSecond(
       bank.earnTokenName,
@@ -347,7 +347,7 @@ export class BombFinance {
     depositTokenName: string,
   ) {
 
-    if (earnTokenName === 'GRAPE') {
+    if (earnTokenName === 'CREAM') {
       if (!contractName.endsWith('1')) {
         const rewardPerSecond = await poolContract.grapePerSecond();
         if (depositTokenName === 'WAVAX') {
@@ -382,7 +382,7 @@ export class BombFinance {
     }
     const rewardPerSecond = await poolContract.grapePerSecond();
     
-    if (depositTokenName.startsWith('GRAPE')) {
+    if (depositTokenName.startsWith('CREAM')) {
       return rewardPerSecond.mul(21000).div(41000);
     } else {
       return rewardPerSecond.mul(20000).div(41000);
@@ -404,9 +404,9 @@ export class BombFinance {
     if (tokenName === 'WAVAX') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
-      if (tokenName === 'GRAPE-MIM-LP') {
+      if (tokenName === 'CREAM-MIM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.BOMB, true);
-      } else if (tokenName === 'WINE-AVAX-LP') {
+      } else if (tokenName === 'CSHARE-AVAX-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.BSHARE, false);
       } else if (tokenName === 'BSHARE-BNB-APELP') {
         tokenPrice = await this.getApeLPTokenPrice(token, this.BSHARE, false);
@@ -534,13 +534,13 @@ export class BombFinance {
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
     try {
-      if (earnTokenName === 'GRAPE') {
+      if (earnTokenName === 'CREAM') {
         return await pool.pendingGRAPE(poolId, account);
       } else {
         return await pool.pendingShare(poolId, account);
       }
     } catch (err) {
-      console.error(`Failed to call pendingShare() on pool ${pool.address}: ${err.stack}`);
+      console.error(`Failed to call pendingShare() on pool ${pool.address}: ${err}`);
       return BigNumber.from(0);
     }
   }
@@ -551,7 +551,7 @@ export class BombFinance {
       let userInfo = await pool.userInfo(poolId, account);
       return await userInfo.amount;
     } catch (err) {
-      console.error(`Failed to call userInfo() on pool ${pool.address}: ${err.stack}`);
+      console.error(`Failed to call userInfo() on pool ${pool.address}: ${err}`);
       return BigNumber.from(0);
     }
   }
@@ -660,7 +660,7 @@ export class BombFinance {
     const {MIM} = this.config.externalTokens;
 
     const mim = new Token(43114, MIM[0], MIM[1]);
-    const token = new Token(43114, this.BOMB.address, this.BOMB.decimal, 'GRAPE');
+    const token = new Token(43114, this.BOMB.address, this.BOMB.decimal, 'CREAM');
     try {
       const wftmToToken = await Fetcher.fetchPairData(mim, token, this.provider);
       const priceInBUSD = new Route([wftmToToken], token);
@@ -669,7 +669,7 @@ export class BombFinance {
       
       return priceForPeg.toFixed(4);
     } catch (err) {
-      console.error(`Failed to fetch token price of GRAPE: ${err}`);
+      console.error(`Failed to fetch token price of CREAM: ${err}`);
     }
   }
 

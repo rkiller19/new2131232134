@@ -13,7 +13,7 @@ const Loader = () => {
         color: 'white',
       }}
     >
-      <Typography>Collecting Grapes</Typography>
+      <Typography>Starting up the machines............</Typography>
     </div>
   );
 };

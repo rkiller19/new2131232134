@@ -1,5 +1,5 @@
 
-#Welcome to GRAPE FINANCE
+#Welcome to IceCream FINANCE
 
 
 Thanks for taking the time to contribute!
@@ -37,7 +37,7 @@ npx prettier --write .
 =======
 
 
-- [Our project documentation] (https://grapefinance.gitbook.io/grape-finance-docs/) will help you understand before start contributing
-- Join our Discord (https://discord.gg/mZ4QrZwH5M) community to get in on the discussion
-- Or if you are more of a [Telegram person](https://t.me/GrapeDefi) we have that too
+- [Our project documentation] (https://icecreamfinancial.gitbook.io/icecream-finance/) will help you understand before start contributing
+- Join our Discord (https://discord.gg/icecream) community to get in on the discussion
+- Or if you are more of a [Telegram person](https://t.me/icecreamfinance) we have that too
 - Bugs? Use the Issues section of our github to report them

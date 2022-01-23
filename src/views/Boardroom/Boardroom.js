@@ -90,9 +90,9 @@ const Boardroom = () => {
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
                     <Typography style={{textTransform: 'uppercase', color: '#930993'}}>
-                      GRAPE PEG <small>(TWAP)</small>
+                      CREAM PEG <small>(TWAP)</small>
                     </Typography>
-                    <Typography>{scalingFactor} MIM</Typography>
+                    <Typography>{scalingFactor} AVAX</Typography>
                     
                   </CardContent>
                 </Card>

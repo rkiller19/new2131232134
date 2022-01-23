@@ -131,21 +131,21 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   let pairName: string;
   let uniswapUrl: string;
   let vaultUrl: string;
-  if (bank.depositTokenName.includes('GRAPE')) {
+  if (bank.depositTokenName.includes('CREAM')) {
     pairName = 'BOMB-BTCB pair';
-    uniswapUrl = 'https://traderjoexyz.com/#/pool/0x130966628846bfd36ff31a822705796e8cb8c18d/0x5541d83efad1f281571b343977648b75d95cdac2';
+    uniswapUrl = 'https://traderjoexyz.com/#/pool/';
     vaultUrl = '#';
   } else {
     pairName = 'BSHARE-BNB pair';
-    uniswapUrl = 'https://traderjoexyz.com/#/pool/0x859b0921b783874175701fe06393f736535d5074/AVAX';
+    uniswapUrl = 'https://traderjoexyz.com/#/pool/';
     vaultUrl = '#';
 
   }
   return (
     <Card>
       <CardContent>
-        <StyledLink href="https://traderjoexyz.com/#/pool/0x130966628846bfd36ff31a822705796e8cb8c18d/0x5541d83efad1f281571b343977648b75d95cdac2" target="_blank">
-          <span style={{color: "#000"}}>Provide liquidity for GRAPE-MIM LP on Joe</span>
+        <StyledLink href="https://traderjoexyz.com/#/pool/" target="_blank">
+          <span style={{color: "#000"}}>Provide liquidity for CREAM-AVAX LP on Joe</span>
         </StyledLink>
       </CardContent>
     </Card>

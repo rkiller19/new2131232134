@@ -88,7 +88,7 @@ const Providers: React.FC = ({children}) => {
             walletconnect: {rpcUrl: config.defaultProvider},
             walletlink: {
               url: config.defaultProvider,
-              appName: 'grapefinance.app',
+              appName: 'icecreamfinance.app',
               appLogoUrl: '#',
             },
           }}

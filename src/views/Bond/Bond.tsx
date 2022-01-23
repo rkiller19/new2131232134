@@ -99,8 +99,8 @@ const Bond: React.FC = () => {
                   toTokenName="BBOND"
                   priceDesc={
                     !isBondPurchasable
-                      ? 'GRAPE is over peg'
-                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' GBOND available for purchase'
+                      ? 'CREAM is over peg'
+                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' CBOND available for purchase'
                   }
                   onExchange={handleBuyBonds}
                   disabled={!bondStat || isBondRedeemable}
@@ -108,7 +108,7 @@ const Bond: React.FC = () => {
               </StyledCardWrapper>
               <StyledStatsWrapper>
                 <ExchangeStat
-                  tokenName="1 GRAPE"
+                  tokenName="1 CREAM"
                   description="Last-Hour TWAP Price"
                   //price={Number(bombStat?.tokenInFtm).toFixed(4) || '-'}
                  price={bondScale || '-'}
@@ -116,8 +116,8 @@ const Bond: React.FC = () => {
                 />
                 <Spacer size="md" />
                 <ExchangeStat
-                  tokenName="1 GRAPE"
-                  description="Current Price: (GRAPE)^2"
+                  tokenName="1 CREAM"
+                  description="Current Price: (CREAM)^2"
                   price={Number(bondStat?.tokenInFtm).toFixed(4) || '-'}
                 />
               </StyledStatsWrapper>
@@ -131,7 +131,7 @@ const Bond: React.FC = () => {
                   priceDesc={`${getDisplayBalance(bondBalance)} GBOND Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
-                  disabledDescription={!isBondRedeemable ? `Enabled when 11 GRAPE > $${BOND_REDEEM_PRICE}` : null}
+                  disabledDescription={!isBondRedeemable ? `Enabled when 11 CREAM > $${BOND_REDEEM_PRICE}` : null}
                 />
               </StyledCardWrapper>
             </StyledBond>
