@@ -185,6 +185,18 @@ const Home = () => {
                 </a>{' '}
                 to find out more!
                 </p>
+                <p>
+                  Our KYC is now complete by Assured DeFi, check out our {' '}
+                <a
+                  href="https://www.assuredefi.io/projects/icecream-finance/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  style={{ color: '#89CFF0' }}
+                >
+                  NFT
+                </a>{' '}
+                for more details!
+                </p>
                 
 
             </Box>

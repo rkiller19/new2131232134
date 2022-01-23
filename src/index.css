@@ -209,7 +209,7 @@ code {
   -webkit-box-shadow: 10px 22px 33px 0px rgba(0,0,0,0.58)!important;
   -moz-box-shadow: 10px 22px 33px 0px rgba(0,0,0,0.58)!important;
   box-shadow: 10px 22px 33px 0px rgba(0,0,0,0.58)!important;
-  overflow:hidden
+  overflow:hidden!important
 }
 
 .MuiAlert-filledWarning{
