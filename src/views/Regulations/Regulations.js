@@ -19,12 +19,12 @@ const StyledTableCell = withStyles((theme) => ({
   head: {
     fontSize: 18,
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    color: '#2c2560',
+    color: '#2f83d7',
     fontWeight: 'bolder',
   },
   body: {
     fontSize: 14,
-    color: '#2c2560',
+    color: '#2f83d7',
   },
 }))(TableCell);
 const useStyles = makeStyles((theme) => ({
@@ -99,7 +99,7 @@ const Regulations = () => {
                 style={index % 2 ? {background: 'rgba(255,255,255,0.9)'} : {background: 'rgba(255,255,255,0.8)'}}
                 key={row.epoch}
               >
-                <StyledTableCell style={{color: '#2c2560'}} align="center" component="th" scope="row">
+                <StyledTableCell style={{color: '#2f83d7'}} align="center" component="th" scope="row">
                   {row.epoch}
                 </StyledTableCell>
                 <StyledTableCell align="center">{row.boardroom}</StyledTableCell>

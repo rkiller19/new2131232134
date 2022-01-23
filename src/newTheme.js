@@ -15,7 +15,7 @@ const newTheme = createTheme({
     },
     primary: {
       light: '#ffe066',
-      main: '#2c2560',
+      main: '#2f83d7',
       dark: '#b38f00',
       contrastText: '#000',
     },
@@ -32,7 +32,7 @@ const newTheme = createTheme({
     },
   },
   typography: {
-    color: '#2c2560',
+    color: '#2f83d7',
     fontFamily: ['"monospace"', 'sans-serif'].join(','),
   },
 });
