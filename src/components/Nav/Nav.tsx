@@ -130,18 +130,21 @@ const Nav = () => {
               
               <Link to="/farm" className={'navLink ' + classes.link}>
                 Creamery
+                </Link>
+              <Link to="/boardroom" className={'navLink ' + classes.link}>
+                Parlour
               </Link>
+
+              <Link to="/bond" className={'navLink ' + classes.link}>
+                Factory
+              </Link>
+
               <a href="https://icecreamfinancial.gitbook.io/icecream-finance/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
                 Documents
               </a>
-              {/*<Link to="/boardroom" className={'navLink ' + classes.link}>
-                Factory
-              </Link>
-              <Link to="/bond" className={'navLink ' + classes.link}>
-                Maintenance
-              </Link>
 
-               <Link color="textPrimary" to="/sbs" className={classes.link}>
+
+              {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
               </Link>
               <Link color="textPrimary" to="/liquidity" className={classes.link}>
@@ -228,9 +231,9 @@ const Nav = () => {
                   <ListItemText>Documents</ListItemText>
                   </ListItem>
                 
-                {/*<ListItemLink primary="Factory" to="/boardroom" />
-                <ListItemLink primary="Maintenance" to="/bond" />
-                 <ListItemLink primary="SBS" to="/sbs" /> */}
+                <ListItemLink primary="Parlour" to="/boardroom" />
+                <ListItemLink primary="Factory" to="/bond" />
+                {/* <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
                 {/* <ListItemLink primary="Regulations" to="/regulations" /> 
                 <ListItem button component="a" href="#">
