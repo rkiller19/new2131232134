@@ -99,7 +99,7 @@ const Stake: React.FC<StakeProps> = ({bank}) => {
             <CardIcon>
               <TokenSymbol symbol={bank.depositToken.symbol} size={54} />
             </CardIcon>
-            <Typography style={{textTransform: 'uppercase', color: '#930993'}}>       
+            <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>       
                 <Value value={getDisplayBalance(stakedBalance, bank.depositToken.decimal)} />
             </Typography>
             

@@ -33,7 +33,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
   border: 0px solid #f9d749;
   border-radius: 28px;
-  background-color: #930993;
+  background-color: #2f83d7;
   box-shadow: ${(props) => ('0px 0px 5px 0px ' + !props.disabled ? 'rgba(251,221,76,1)' : 'grey' + ';')};
   color: ${(props) => (!props.disabled ? '#fff' : 'grey')};
   cursor: pointer;

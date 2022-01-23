@@ -72,7 +72,7 @@ const ExchangeCard: React.FC<ExchangeCardProps> = ({
               <StyledCardIcon>
                 <TokenSymbol symbol={fromToken.symbol} size={95} />
               </StyledCardIcon>
-              <Label text={fromTokenName} color="#930993" />
+              <Label text={fromTokenName} color="#fff" />
             </StyledToken>
             <StyledExchangeArrow>
               <FontAwesomeIcon icon={faArrowRight} />
@@ -81,7 +81,7 @@ const ExchangeCard: React.FC<ExchangeCardProps> = ({
               <StyledCardIcon>
                 <TokenSymbol symbol={toToken.symbol} size={54} />
               </StyledCardIcon>
-              <Label text={toTokenName} color="#930993" />
+              <Label text={toTokenName} color="#fff" />
             </StyledToken>
           </StyledExchanger>
           <StyledDesc>{priceDesc}</StyledDesc>
@@ -117,7 +117,7 @@ const StyledCardTitle = styled.div`
   font-weight: 700;
   height: 64px;
   justify-content: center;
-  color: #930993;
+  color: #fff;
   margin-top: ${(props) => -props.theme.spacing[3]}px;
 `;
 

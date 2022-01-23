@@ -29,7 +29,7 @@ const FarmCard = ({bank}) => {
             <Typography variant="h5" component="h2">
               {bank.depositTokenName}
             </Typography>
-            <Typography color="#322f32">
+            <Typography color="#fff">
               {/* {bank.name} */}
               Deposit {bank.depositTokenName.toUpperCase()} Earn {` ${bank.earnTokenName}`}
             </Typography>

@@ -43,14 +43,14 @@ const Harvest: React.FC<HarvestProps> = ({bank}) => {
             <CardIcon>
               <TokenSymbol symbol={bank.earnTokenName} />
             </CardIcon>
-            <Typography style={{textTransform: 'uppercase', color: '#930993'}}>  
+            <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>  
             <Value value={getDisplayBalance(earnings)} />
             </Typography>
                           {/*<Typography style={{textTransform: 'uppercase', color: '#fffff'}}>
                       {`≈ $${earnedInDollars}`}
   </Typography>*/}
              <Label text={`≈ $${earnedInDollars}`} /> 
-                  <Typography style={{textTransform: 'uppercase', color: '#322f32'}}>
+                  <Typography style={{textTransform: 'uppercase', color: '#fff'}}>
               {`${tokenName} Earned`}
                     </Typography>
              {/* <Label text={`${tokenName} Earned`} /> */}

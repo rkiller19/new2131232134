@@ -65,15 +65,13 @@ const Boardroom = () => {
       <BackgroundImage />
       {!!account ? (
         <>
-          <Typography color="#FFF" align="center" variant="h3" gutterBottom>
-            Boardroom
-          </Typography>
+        <h2 style={{ color:'white', fontSize: '60px', textAlign:'center' }}>Parlour</h2>    
           <Box mt={5}>
             <Grid container justify="center" spacing={3}>
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card className={classes.gridItem}>
                   <CardContent style={{textAlign: 'center'}}>
-                    <Typography style={{textTransform: 'uppercase', color: '#930993'}}>Next Epoch</Typography>
+                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>Next Epoch</Typography>
                     <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={to} description="Next Epoch" />
                   </CardContent>
                 </Card>
@@ -81,7 +79,7 @@ const Boardroom = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{textTransform: 'uppercase', color: '#930993'}}>Current Epoch</Typography>
+                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>Current Epoch</Typography>
                     <Typography>{Number(currentEpoch)}</Typography>
                   </CardContent>
                 </Card>
@@ -89,7 +87,7 @@ const Boardroom = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{textTransform: 'uppercase', color: '#930993'}}>
+                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>
                       CREAM PEG <small>(TWAP)</small>
                     </Typography>
                     <Typography>{scalingFactor} AVAX</Typography>
@@ -100,7 +98,7 @@ const Boardroom = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{textTransform: 'uppercase', color: '#930993'}}>APR</Typography>
+                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>APR</Typography>
                     <Typography>{boardroomAPR.toFixed(2)}%</Typography>
                   </CardContent>
                 </Card>
@@ -108,7 +106,7 @@ const Boardroom = () => {
               <Grid item xs={12} md={2} lg={2}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{textTransform: 'uppercase', color: '#930993'}}>CSHARES Staked</Typography>
+                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>CSHARES Staked</Typography>
                     <Typography>{getDisplayBalance(totalStaked)}</Typography>
                   </CardContent>
                 </Card>

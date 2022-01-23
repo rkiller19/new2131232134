@@ -227,12 +227,12 @@ const Nav = () => {
                 </ListItem>
                 <ListItemLink primary="Home" to="/" />
                 <ListItemLink primary="Creamery" to="/farm" />
+                <ListItemLink primary="Parlour" to="/boardroom" />
+                <ListItemLink primary="Factory" to="/bond" />
                 <ListItem button component="a" href="https://icecreamfinancial.gitbook.io/icecream-finance/">
                   <ListItemText>Documents</ListItemText>
                   </ListItem>
                 
-                <ListItemLink primary="Parlour" to="/boardroom" />
-                <ListItemLink primary="Factory" to="/bond" />
                 {/* <ListItemLink primary="SBS" to="/sbs" /> */}
                 {/* <ListItemLink primary="Liquidity" to="/liquidity" /> */}
                 {/* <ListItemLink primary="Regulations" to="/regulations" /> 

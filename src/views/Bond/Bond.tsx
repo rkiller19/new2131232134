@@ -48,7 +48,7 @@ const Bond: React.FC = () => {
     async (amount: string) => {
       const tx = await bombFinance.buyBonds(amount);
       addTransaction(tx, {
-        summary: `Buy ${Number(amount).toFixed(2)} BBOND with ${amount} BOMB`,
+        summary: `Buy ${Number(amount).toFixed(2)} CBOND with ${amount} CREAM`,
       });
     },
     [bombFinance, addTransaction],
@@ -57,7 +57,7 @@ const Bond: React.FC = () => {
   const handleRedeemBonds = useCallback(
     async (amount: string) => {
       const tx = await bombFinance.redeemBonds(amount);
-      addTransaction(tx, {summary: `Redeem ${amount} BBOND`});
+      addTransaction(tx, {summary: `Redeem ${amount} CBOND`});
     },
     [bombFinance, addTransaction],
   );
@@ -94,9 +94,9 @@ const Bond: React.FC = () => {
                 <ExchangeCard
                   action="Purchase"
                   fromToken={bombFinance.BOMB}
-                  fromTokenName="BOMB"
+                  fromTokenName="CREAM"
                   toToken={bombFinance.BBOND}
-                  toTokenName="BBOND"
+                  toTokenName="CBOND"
                   priceDesc={
                     !isBondPurchasable
                       ? 'CREAM is over peg'
@@ -125,13 +125,13 @@ const Bond: React.FC = () => {
                 <ExchangeCard
                   action="Redeem"
                   fromToken={bombFinance.BBOND}
-                  fromTokenName="BBOND"
+                  fromTokenName="CBOND"
                   toToken={bombFinance.BOMB}
-                  toTokenName="BOMB"
+                  toTokenName="CREAM"
                   priceDesc={`${getDisplayBalance(bondBalance)} CBOND Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
-                  disabledDescription={!isBondRedeemable ? `Enabled when 11 CREAM > $${BOND_REDEEM_PRICE}` : null}
+                  disabledDescription={!isBondRedeemable ? `Enabled when 1 CREAM > $${BOND_REDEEM_PRICE}` : null}
                 />
               </StyledCardWrapper>
             </StyledBond>
