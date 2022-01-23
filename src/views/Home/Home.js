@@ -27,6 +27,7 @@ import { ReactComponent as IconTelegram } from '../../assets/img/telegram.svg';
 import BombImage from '../../assets/img/cream.png';
 
 import HomeImage from '../../assets/img/background.jpg';
+import { Bold } from 'react-feather';
 const BackgroundImage = createGlobalStyle`
   body {
     background: url(${HomeImage}) repeat !important;
@@ -185,7 +186,7 @@ const Home = () => {
                 </a>{' '}
                 to find out more!
                 </p>
-                <p>
+                <p style={{ fontSize: '18px' }}>
                   Our KYC is now complete by Assured DeFi, check out our {' '}
                 <a
                   href="https://www.assuredefi.io/projects/icecream-finance/"
