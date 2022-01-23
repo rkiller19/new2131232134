@@ -128,7 +128,7 @@ const Bond: React.FC = () => {
                   fromTokenName="BBOND"
                   toToken={bombFinance.BOMB}
                   toTokenName="BOMB"
-                  priceDesc={`${getDisplayBalance(bondBalance)} GBOND Available in wallet`}
+                  priceDesc={`${getDisplayBalance(bondBalance)} CBOND Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
                   disabledDescription={!isBondRedeemable ? `Enabled when 11 CREAM > $${BOND_REDEEM_PRICE}` : null}
