@@ -8,7 +8,7 @@ import tShareLogoPNG from '../../assets/img/cshare.svg';
 import tBondLogo from '../../assets/img/cbond.png';
 import mimLogo from '../../assets/img/mim.png';
 import wavax from '../../assets/img/wavax.png';
-
+import creamCshare from '../../assets/img/creamcshare.png';
 import bombFtmLpLogo from '../../assets/img/cream-wavax.png';
 import bshareFtmLpLogo from '../../assets/img/cshare-avax.png';
 
@@ -41,7 +41,8 @@ const logosBySymbol: {[title: string]: string} = {
   'BSHARE-BNB-LP': bshareFtmLpLogo,
   'BSHARE-BNB-APELP': bshareFtmLpLogo,
   'BOMB-BTCB-APELP': bombFtmLpLogo,
-  'CREAM-MIM-LP' : bombFtmLpLogo,
+  'CREAM-WAVAX-LP' : bombFtmLpLogo,
+  'CREAM-CSHARE-LP': creamCshare,
 };
 
 type LogoProps = {
@@ -53,7 +54,7 @@ const TokenSymbol: React.FC<LogoProps> = ({symbol}) => {
   if (!logosBySymbol[symbol]) {
     throw new Error(`Invalid Token Logo symbol: ${symbol}`);
   }
-  if(symbol === 'CREAM-MIM-LP' || symbol === 'BSHARE-BNB-LP' || symbol === 'BOMB-BTCB-LP'){
+  if(symbol === 'CREAM-WAVAX-LP' || symbol === 'CSHARE-WAVAX-LP' || symbol === 'BSHARE-BNB-LP' || symbol === 'BOMB-BTCB-LP' || symbol === 'CREAM-CSHARE-LP'){
     return <img src={logosBySymbol[symbol]} alt={`${symbol} Logo`} width={95} height={60} />;
   }else if(symbol === 'MIM' || symbol === 'WAVAX'){
     return <img src={logosBySymbol[symbol]} alt={`${symbol} Logo`} width={65} height={65} />;

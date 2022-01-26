@@ -56,6 +56,7 @@ const Home = () => {
   const TVL = useTotalValueLocked();
   const bombFtmLpStats = useLpStatsBTC('CREAM-MIM-LP');
   const bShareFtmLpStats = useLpStats('CSHARE-AVAX-LP');
+  const newPair = useLpStats('CREAM-CSHARE-LP');
   const bombStats = useBombStats();
   const bShareStats = usebShareStats();
   const tBondStats = useBondStats();
@@ -73,8 +74,13 @@ const Home = () => {
 
   const buyBombAddress = 'https://traderjoexyz.com/#/trade';
   const buyBShareAddress = 'https://traderjoexyz.com/#/trade';
+  const cshareChart = 'https://dexscreener.com/avalanche/';
+  const creamChart = 'https://dexscreener.com/avalanche/';
+
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bshareLPStats = useMemo(() => (bShareFtmLpStats ? bShareFtmLpStats : null), [bShareFtmLpStats]);
+  const newPairLPStats = useMemo(() => (newPair ? newPair : null), [newPair]);
+  
   const bombPriceInDollars = useMemo(
     () => (bombStats ? Number(bombStats.priceInDollars).toFixed(2) : null),
     [bombStats],
@@ -107,7 +113,7 @@ const Home = () => {
     [tBondStats],
   );
   const tBondTotalSupply = useMemo(() => (tBondStats ? String(tBondStats.totalSupply) : null), [tBondStats]);
-
+/*
   const bombLpZap = useZap({ depositTokenName: 'BOMB-BTCB-LP' });
   const bshareLpZap = useZap({ depositTokenName: 'BSHARE-BNB-LP' });
 
@@ -134,7 +140,7 @@ const Home = () => {
       tokenName={'BSHARE-BNB-LP'}
     />,
   );
-
+*/
   return (
     <Page>
       <BackgroundImage />
@@ -248,9 +254,25 @@ const Home = () => {
                 target="_blank"
                 href={buyBShareAddress}
                 className={'shinyButton ' + classes.button}
-                style={{ marginLeft: '10px' }}
+                style={{ margin: '10px' }}
               >
                 Buy CSHARE
+              </Button>
+              <Button
+                target="_blank"
+                href={creamChart}
+                className={'shinyButton ' + classes.button}
+                style={{ margin: '10px' }}
+              >
+                CREAM Chart
+              </Button>
+              <Button
+                target="_blank"
+                href={cshareChart}
+                className={'shinyButton ' + classes.button}
+                style={{ margin: '10px' }}
+              >
+                CSHARE Chart
               </Button>
             </CardContent>
           </Card>
@@ -402,6 +424,7 @@ const Home = () => {
             </CardContent>
           </Card>
         </Grid>
+        
         <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
@@ -431,6 +454,39 @@ const Home = () => {
                 {bshareLPStats?.totalLiquidity ? roundAndFormatNumber(bshareLPStats.totalLiquidity, 2) : '-.--'}
                 <br />
                 Total Supply: {bshareLPStats?.totalSupply ? roundAndFormatNumber(bshareLPStats.totalSupply, 2) : '-.--'}
+              </span>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Card>
+            <CardContent align="center">
+            <Box mt={2}>
+              <h2 style={{ marginBottom: '10px' }}>CREAM-CSHARE LP</h2>
+              </Box>
+              <Box mt={2}>
+                <CardIcon>
+                  <TokenSymbol symbol="CREAM-CSHARE-LP" style="width:105px;" />
+                </CardIcon>
+              </Box>
+              <Box mt={2}>
+                {/*<Button onClick={onPresentBshareZap} className="shinyButtonSecondary">
+                  Zap In
+            </Button>*/}
+              </Box>
+              <span style={{ fontSize: '25px' }}>
+              Current Price
+              </span>
+              <Box>
+              <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
+              ${newPairLPStats?.priceOfOne ? newPairLPStats.priceOfOne : '-.--'} USD
+              </span>
+              </Box>
+              <span style={{ fontSize: '15px' }}>
+                Liquidity: $
+                {newPairLPStats?.totalLiquidity ? roundAndFormatNumber(newPairLPStats.totalLiquidity, 2) : '-.--'}
+                <br />
+                Total Supply: {newPairLPStats?.totalSupply ? roundAndFormatNumber(newPairLPStats.totalSupply, 2) : '-.--'}
               </span>
             </CardContent>
           </Card>

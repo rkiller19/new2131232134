@@ -131,15 +131,20 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   let pairName: string;
   let uniswapUrl: string;
   let vaultUrl: string;
-  if (bank.depositTokenName.includes('CREAM')) {
-    pairName = 'BOMB-BTCB pair';
-    uniswapUrl = 'https://traderjoexyz.com/#/pool/';
-    vaultUrl = '#';
-  } else {
-    pairName = 'BSHARE-BNB pair';
-    uniswapUrl = 'https://traderjoexyz.com/#/pool/';
+  if (bank.depositTokenName.includes('CREAM-WAVAX')) {
+    pairName = 'CREAM-AVAX pair';
+    uniswapUrl = 'https://traderjoexyz.com/pool/';
     vaultUrl = '#';
 
+  } else if(bank.depositTokenName.includes('CSHARE-WAVAX')){
+    pairName = 'CSHARE-WAVAX pair';
+    uniswapUrl = 'https://traderjoexyz.com/pool/';
+    vaultUrl = '#';
+
+  }else{
+    pairName = 'CREAM-CSHARE pair';
+    uniswapUrl = 'https://traderjoexyz.com/pool/';
+    vaultUrl = '#';
   }
   return (
     <Card>
