@@ -65,7 +65,7 @@ const Boardroom = () => {
       <BackgroundImage />
       {!!account ? (
         <>
-        <h2 style={{ color:'white', fontSize: '60px', textAlign:'center' }}>Parlour</h2>    
+        <h2 style={{ color:'white', fontSize: '60px', textAlign:'center' }}>Parlor</h2>    
           <Box mt={5}>
             <Grid container justify="center" spacing={3}>
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>

@@ -160,7 +160,7 @@ const Home = () => {
               </p>
               <p style={{ fontSize: '17px' }}>
               Our inspiration for starting this protocol came from two simple words INTEGRITY and TRANSPARENCY. Starting off as investors ourselves we noticed that DeFi as a whole, 
-              is moving in the wrong direction. Many projects end up either rugging or failing because many dont realise that DeFi's success is built with a strong community. 
+              is moving in the wrong direction. Many projects end up either rugging or failing because many dont realize that DeFi's success is built with a strong community. 
               We plan to stand side by side with our investors through thick and thin and deliver the sweetest protocol to #AVAX.
                 {/* Stake your BOMB-BTC LP in the Farm to earn BSHARE rewards. Then stake your earned BSHARE in the
                 Boardroom to earn more BOMB! */}
