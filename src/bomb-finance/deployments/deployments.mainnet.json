@@ -467,7 +467,7 @@
     ]
   },
   "BBond": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xECC9433E55B7cdD3bb8cA686b870CEd6DBA401C0",
     "abi": [
       {
         "inputs": [],
@@ -912,7 +912,7 @@
     ]
   },
   "BShare": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7",
     "abi": [
       {
         "inputs": [
@@ -1613,7 +1613,7 @@
     ]
   },
   "BShareRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
     "abi": [
       {
         "inputs": [
@@ -2100,7 +2100,7 @@
   },
 
   "BshareBnbLPBShareRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x1723930C0920347A381F397C04567b20fc362304",
     "abi": [
       {
         "inputs": [
@@ -4063,7 +4063,7 @@
     ]
   },
   "Boardroom": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x3f2461f10DA17c45Ef87D100379b13EbB0497f19",
     "abi": [
       {
         "anonymous": false,
@@ -4615,7 +4615,7 @@
     ]
   },
   "Bomb": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xAE21d31a6494829a9E4B2B291F4984AAE8121757",
     "abi": [
       {
         "inputs": [
@@ -5539,7 +5539,7 @@
     ]
   },
   "CreamWavaxRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x1723930C0920347A381F397C04567b20fc362304",
     "abi": [
       {
         "inputs": [
@@ -6044,7 +6044,7 @@
   },
 
   "BombGenesisRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x1723930C0920347A381F397C04567b20fc362304",
     "abi": [
       {
         "inputs": [
@@ -6549,7 +6549,7 @@
   },
 
   "BombWBNBGenesisRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x1723930C0920347A381F397C04567b20fc362304",
     "abi": [
       {
         "inputs": [
@@ -7054,7 +7054,7 @@
   },
 
   "CreamWavaxLPRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x1723930C0920347A381F397C04567b20fc362304",
     "abi": [
       {
         "inputs": [
@@ -7558,7 +7558,7 @@
     ]
   },
   "CreamMimRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x1723930C0920347A381F397C04567b20fc362304",
     "abi": [
       {
         "inputs": [
@@ -8062,7 +8062,7 @@
     ]
   },
   "CreamWavaxLPRewardPool1": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
@@ -8554,7 +8554,7 @@
   },
 
   "BombRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
@@ -9045,7 +9045,7 @@
     ]
   },
   "CreamMimRewardPool1": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
@@ -9536,7 +9536,7 @@
     ]
   },
   "CreamWavaxRewardPool1": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
@@ -10027,7 +10027,7 @@
     ]
   },
   "Oracle": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x4Fd9d7aC0a643e7Be30ab7396Db629B644DFA907",
     "abi": [
       {
         "inputs": [
@@ -10432,7 +10432,7 @@
     ]
   },
   "TaxOracle": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xfb941788DA7cc0A48A1D8dD789fC5cB66Cc9a98d",
     "abi": [
       {
         "inputs": [
@@ -10651,7 +10651,7 @@
     ]
   },
   "Treasury": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xE30a5A9A88F44196B4b0212110799c8e34192061",
     "abi": [
       {
         "anonymous": false,
@@ -11870,7 +11870,7 @@
     ]
   },
   "TaxOffice": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x246401c014dca385D50977f74faeD41C2c51ae86",
     "abi": [
       {
         "inputs": [
@@ -12175,7 +12175,7 @@
   },
 
   "TaxOfficeV2": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x6e6b000D24A993a39FC8f8ea6180271381e754B4",
     "abi": [
       {
         "anonymous": false,
@@ -12656,7 +12656,7 @@
   },
 
   "CshareWavaxLPCshareRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
@@ -13142,7 +13142,7 @@
     ]
   },
   "CreamWavaxLPCshareRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
@@ -13628,7 +13628,7 @@
     ]
   },
   "CreamCshareLPCshareRewardPool": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
     "abi": [
       {
         "inputs": [
