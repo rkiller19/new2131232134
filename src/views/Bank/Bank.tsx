@@ -55,15 +55,14 @@ const Bank: React.FC = () => {
         subtitle={`Deposit ${bank?.depositTokenName} and earn ${bank?.earnTokenName}`}
         title={bank?.name}
       />
-         <Box mt={5}>
-                <Grid container justify="center" spacing={3} style={{ marginBottom: '30px' }}>
+ <Grid container spacing={3}>
+          <Grid item xs={12} sm={12} justify="center" style={{ margin: '12px', display: 'flex' }}>
 
-        <Alert variant="filled" severity="info">
-            <h3>Please read below:</h3><br />
-            There is a deposit limit of 40 WAVAX and 2500 MIM per wallet
-      </Alert>
-      </Grid>
-        </Box>
+           <Alert variant="filled" severity="info"> 
+              There is a deposit limit of 40 AVAX and 2500 MIM per pool.
+            </Alert>
+          </Grid>
+        </Grid>
         <Box>
         <Grid container justify="center" spacing={3} style={{marginBottom: '50px'}}>
           <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
