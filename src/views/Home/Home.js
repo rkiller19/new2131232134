@@ -305,7 +305,7 @@ const Home = () => {
               </span>
               <Box>             
                <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
-               ${bombPriceInDollars ? roundAndFormatNumber(bombPriceInDollars, 2) : '-.--'} USD
+               ${bombPriceInDollars ? roundAndFormatNumber(bombPriceInDollars, 2) : '-.--'} AVAX
                 </span>
               </Box>
               <span style={{ fontSize: '15px' }}>
@@ -343,7 +343,7 @@ const Home = () => {
               </span>
               <Box>
                 <span style={{ fontSize: '30px', alignContent:'flex-start' }}>
-                  ${bSharePriceInDollars ? bSharePriceInDollars : '-.--'} USD
+                  ${bSharePriceInDollars ? bSharePriceInDollars : '-.--'} AVAX
                 </span>
               </Box>
              <span style={{ fontSize: '15px' }}>
@@ -381,7 +381,7 @@ const Home = () => {
               </span>
               <Box>
                 <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
-                 $ {tBondPriceInDollars ? tBondPriceInDollars : '-.--'} USD
+                 $ {tBondPriceInDollars ? tBondPriceInDollars : '-.--'} AVAX
                 </span>
               </Box>
               <span style={{ fontSize: '15px' }}>
