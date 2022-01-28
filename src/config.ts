@@ -152,7 +152,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     depositTokenName: 'MIM',
     earnTokenName: 'CREAM',
     finished: false,
-    sort: 3,
+    sort: 3,  
     closedForStaking: false,
   },
   CreamWavaxRewardPool: {
