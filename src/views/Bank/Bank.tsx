@@ -58,13 +58,11 @@ const Bank: React.FC = () => {
          <Box mt={5}>
                 <Grid container justify="center" spacing={3} style={{ marginBottom: '30px' }}>
 
-        {/*<Alert variant="filled" severity="info">
-            <h3>Our autocompounding vaults are live!</h3><br />
-            We support zapping tokens, and auto-compound every 2 hours!<br />
-            Check it out here: <a href={vaultUrl}>{vaultUrl}</a>
-
-
-  </Alert>*/}</Grid>
+        <Alert variant="filled" severity="info">
+            <h3>Please read below:</h3><br />
+            There is a deposit limit of 40 WAVAX and 2500 MIM per wallet
+      </Alert>
+      </Grid>
         </Box>
         <Box>
         <Grid container justify="center" spacing={3} style={{marginBottom: '50px'}}>
