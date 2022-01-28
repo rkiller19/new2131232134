@@ -742,7 +742,7 @@ export class BombFinance {
     if (!ready) return;
     const {WAVAX} = this.externalTokens;
     try {
-      const btcPriceInBNB = await this.getTokenPriceFromPancakeswap(WAVAX);
+      const btcPriceInBNB = 1;
       
       const wbnbPrice = await this.getWBNBPriceFromPancakeswap();
 

@@ -305,7 +305,7 @@ const Home = () => {
               </span>
               <Box>             
                <span style={{ fontSize: '30px', alignContent: 'flex-start' }}>
-                  ${bombPriceInDollars ? bombPriceInDollars : '-.--'} USD
+               ${bombPriceInDollars ? roundAndFormatNumber(bombPriceInDollars, 2) : '-.--'} USD
                 </span>
               </Box>
               <span style={{ fontSize: '15px' }}>
