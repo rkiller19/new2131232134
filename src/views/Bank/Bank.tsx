@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Bank: React.FC = () => {
   useEffect(() => window.scrollTo(0, 0));
-  const date = new Date('2022-1-13 17:00:00Z');
+  const date = new Date('2022-1-28 17:00:00Z');
   const classes = useStyles();
   const {bankId} = useParams();
   const bank = useBank(bankId);
@@ -125,20 +125,20 @@ const Bank: React.FC = () => {
 
 const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   const bombFinance = useBombFinance();
-  const bombAddr = 0x5541d83efad1f281571b343977648b75d95cdac2;
-  const bshareAddr = 0x859b0921b783874175701fe06393f736535d5074;
+  const bombAddr = 0xAE21d31a6494829a9E4B2B291F4984AAE8121757;
+  const bshareAddr = 0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7;
 
   let pairName: string;
   let uniswapUrl: string;
   let vaultUrl: string;
   if (bank.depositTokenName.includes('CREAM-WAVAX')) {
     pairName = 'CREAM-AVAX pair';
-    uniswapUrl = 'https://traderjoexyz.com/pool/';
+    uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/';
     vaultUrl = '#';
 
   } else if(bank.depositTokenName.includes('CSHARE-WAVAX')){
     pairName = 'CSHARE-WAVAX pair';
-    uniswapUrl = 'https://traderjoexyz.com/pool/';
+    uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7#/';
     vaultUrl = '#';
 
   }else{
@@ -149,7 +149,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   return (
     <Card>
       <CardContent>
-        <StyledLink href="https://traderjoexyz.com/#/pool/" target="_blank">
+        <StyledLink href="https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/" target="_blank">
           <span style={{color: "#000"}}>Provide liquidity for CREAM-AVAX LP on Joe</span>
         </StyledLink>
       </CardContent>

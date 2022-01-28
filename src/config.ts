@@ -124,9 +124,9 @@ const configurations: {[env: string]: Configuration} = {
       'USDT-BTCB-LP': ['0x3f803ec2b816ea7f06ec76aa2b6f2532f9892d62', 18],
 
     },
-    baseLaunchDate: new Date('2021-12-30 1:00:00Z'),
-    bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
-    boardroomLaunchesAt: new Date('2022-01-31T14:00:00Z'),
+    baseLaunchDate: new Date('2022-01-28 17:00:00Z'),
+    bondLaunchesAt: new Date('2022-01-30T17:00:00Z'),
+    boardroomLaunchesAt: new Date('2022-01-31T17:00:00Z'),
     refreshInterval: 10000,
   },
 };
