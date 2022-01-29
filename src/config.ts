@@ -175,7 +175,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     earnTokenName: 'CREAM',
     finished: false,
     sort: 1,
-    closedForStaking: true,
+    closedForStaking: false,
   },
 
   CreamAvaxLPCshareRewardPool: {
