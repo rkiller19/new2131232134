@@ -97,7 +97,7 @@ export class BombFinance {
 
   //===================================================================
   //===================== GET ASSET STATS =============================
-  //===================FROM APE TO DISPLAY =========================
+  //=================== FROM APE TO DISPLAY =========================
   //=========================IN HOME PAGE==============================
   //===================================================================
 
@@ -110,23 +110,23 @@ export class BombFinance {
 
     const minusAirdrop = getDisplayBalance(bombCirculatingSupply, this.BOMB.decimal, 0);
 
-    const priceInBNB = await this.getTokenPriceFromPancakeswap(this.BOMB);
+    const priceInBNB = await this.getTokenPriceFromPancakeswap(this.BOMB); // price of cream in avax
    
     const priceInBNBstring = priceInBNB.toString();
 
     const priceInBTC = await this.getTokenPriceFromPancakeswapBTC(this.BOMB);
   
-    const priceOfOneBNB = await this.getWBNBPriceFromPancakeswap();
+    const priceOfOneBNB = await this.getWBNBPriceFromPancakeswap(); //price of avax
 
     const priceOfOneBTC = 1;
 
     const priceInDollars = await this.getTokenPriceFromPancakeswapBOMBUSD();
 
-    const priceOfBombInDollars = ((Number(priceInBTC) * Number(priceOfOneBTC))).toFixed(2);
+    const priceOfBombInDollars = ((Number(priceInBNB) * Number(priceOfOneBNB))).toFixed(2);
 
     return {
       
-      tokenInFtm: priceInBTC.toString(),
+      tokenInFtm: priceInBNB.toString(),
       priceInDollars: priceOfBombInDollars,
       totalSupply: getDisplayBalance(supply, 18, 0),
       circulatingSupply: minusAirdrop,
@@ -251,13 +251,15 @@ export class BombFinance {
    
     const supply = await this.BSHARE.totalSupply();
     
-    const priceInBNB = await this.getTokenPriceFromPancakeswap(this.BSHARE);
+    const priceInBNB = await this.getTokenPriceFromPancakeswap(this.BSHARE); //is it getting price
     
     const bombRewardPoolSupply = await this.BSHARE.balanceOf(BShareRewardPool.address);
 
     const tShareCirculatingSupply = supply.sub(bombRewardPoolSupply);
+
+    const priceOfOneBNB = await this.getWBNBPriceFromPancakeswap();
     
-    const priceOfSharesInDollars = (Number(priceInBNB)).toFixed(2);
+    const priceOfSharesInDollars = ((Number(priceInBNB)*Number(priceOfOneBNB)).toFixed(2));
 
     return {
       tokenInFtm: priceOfSharesInDollars,
@@ -307,12 +309,12 @@ export class BombFinance {
    */
   async getPoolAPRs(bank: Bank): Promise<PoolStats> {
     if (this.myAccount === undefined) return;
-    const depositToken = bank.depositToken;
+    const depositToken = bank.depositToken; //0
     const poolContract = this.contracts[bank.contract];
 
-    const depositTokenPrice = await this.getDepositTokenPriceInDollars(bank.depositTokenName, depositToken);
+    const depositTokenPrice = await this.getDepositTokenPriceInDollars(bank.depositTokenName, depositToken); //0
 
-    const stakeInPool = await depositToken.balanceOf(bank.address);
+    const stakeInPool = await depositToken.balanceOf(bank.address); //0
 
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
     
@@ -637,7 +639,7 @@ export class BombFinance {
   async getTokenPriceFromPancakeswap(tokenContract: ERC20): Promise<string> {
     const ready = await this.provider.ready;
     if (!ready) return;
-    //const { chainId } = this.config;
+    // const { chainId } = this.config;
     const {WAVAX} = this.config.externalTokens;
 
     const wftm = new Token(43114, WAVAX[0], WAVAX[1], 'WAVAX');
@@ -696,31 +698,8 @@ export class BombFinance {
     }
   }
 
-  // async getTokenPriceFromSpiritswap(tokenContract: ERC20): Promise<string> {
-  //   const ready = await this.provider.ready;
-  //   if (!ready) return;
-  //   const { chainId } = this.config;
 
-  //   const { WBNB } = this.externalTokens;
-
-  //   const wftm = new TokenSpirit(chainId, WBNB.address, WBNB.decimal);
-  //   const token = new TokenSpirit(chainId, tokenContract.address, tokenContract.decimal, tokenContract.symbol);
-  //   try {
-  //     const wftmToToken = await FetcherSpirit.fetchPairData(wftm, token, this.provider);
-  //     const liquidityToken = wftmToToken.liquidityToken;
-  //     let ftmBalanceInLP = await WBNB.balanceOf(liquidityToken.address);
-  //     let ftmAmount = Number(getFullDisplayBalance(ftmBalanceInLP, WBNB.decimal));
-  //     let shibaBalanceInLP = await tokenContract.balanceOf(liquidityToken.address);
-  //     let shibaAmount = Number(getFullDisplayBalance(shibaBalanceInLP, tokenContract.decimal));
-  //     const priceOfOneFtmInDollars = await this.getWBNBPriceFromPancakeswap();
-  //     let priceOfShiba = (ftmAmount / shibaAmount) * Number(priceOfOneFtmInDollars);
-  //     return priceOfShiba.toString();
-  //   } catch (err) {
-  //     console.error(`Failed to fetch token price of ${tokenContract.symbol}: ${err}`);
-  //   }
-  // }
-
-  async getWBNBPriceFromPancakeswap(): Promise<string> {
+  async getWBNBPriceFromPancakeswap(): Promise<string> { //not here
     const ready = await this.provider.ready;
     if (!ready) return;
     const {WAVAX, MIM} = this.externalTokens;
@@ -737,7 +716,7 @@ export class BombFinance {
     }
   }
 
-  async getBTCBPriceFromPancakeswap(): Promise<string> {
+  async getBTCBPriceFromPancakeswap(): Promise<string> { // not
     const ready = await this.provider.ready;
     if (!ready) return;
     const {WAVAX} = this.externalTokens;
@@ -754,23 +733,6 @@ export class BombFinance {
     }
   }
 
-  // async getBTCBPriceFromPancakeswap(): Promise<string> {
-  //   const ready = await this.provider.ready;
-  //   if (!ready) return;
-  //   const { BTCB, FUSDT } = this.externalTokens;
-  //   try {
-  //     const fusdt_btcb_lp_pair = this.externalTokens['USDT-BTCB-LP'];
-  //     let ftm_amount_BN = await BTCB.balanceOf(fusdt_btcb_lp_pair.address);
-  //     let ftm_amount = Number(getFullDisplayBalance(ftm_amount_BN, BTCB.decimal));
-  //     let fusdt_amount_BN = await FUSDT.balanceOf(fusdt_btcb_lp_pair.address);
-  //     let fusdt_amount = Number(getFullDisplayBalance(fusdt_amount_BN, FUSDT.decimal));
-  //     console.log('BTCB price', (fusdt_amount / ftm_amount).toString());
-  //     return (fusdt_amount / ftm_amount).toString();
-  //     console.log('BTCB price');
-  //   } catch (err) {
-  //     console.error(`Failed to fetch token price of BTCB: ${err}`);
-  //   }
-  // }
 
   //===================================================================
   //===================================================================
@@ -1160,7 +1122,7 @@ export class BombFinance {
       const estimateBN = await BShareSwapper.estimateAmountOfBShare(parseUnits(bbondAmount, 18));
       return getDisplayBalance(estimateBN, 18, 6);
     } catch (err) {
-      console.error(`Failed to fetch estimate bshare amount: ${err}`);
+      console.error(`Failed to fetch estimate cshare amount: ${err}`);
     }
   }
 

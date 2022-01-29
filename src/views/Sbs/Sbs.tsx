@@ -104,7 +104,7 @@ const Sbs: React.FC = () => {
         {!!account ? (
           <>
             <Route exact path={path}>
-              <PageHeader icon={'🏦'} title="BBond -> BShare Swap" subtitle="Swap BBond to BShare" />
+              <PageHeader icon={'🏦'} title="CBond -> CShare Swap" subtitle="Swap CBond to CShare" />
             </Route>
             <Box mt={5}>
               <Grid container justify="center" spacing={6}>
@@ -114,7 +114,7 @@ const Sbs: React.FC = () => {
                       <Card>
                         <CardContent>
                           <StyledCardContentInner>
-                            <StyledCardTitle>BBonds</StyledCardTitle>
+                            <StyledCardTitle>CBonds</StyledCardTitle>
                             <StyledExchanger>
                               <StyledToken>
                                 <StyledCardIcon>
@@ -128,10 +128,10 @@ const Sbs: React.FC = () => {
                                 onChange={handleBBondChange}
                                 value={bbondAmount}
                                 max={bondBalance}
-                                symbol="BBond"
+                                symbol="CBond"
                               ></TokenInput>
                             </Grid>
-                            <StyledDesc>{`${bondBalance} BBOND Available in Wallet`}</StyledDesc>
+                            <StyledDesc>{`${bondBalance} CBOND Available in Wallet`}</StyledDesc>
                           </StyledCardContentInner>
                         </CardContent>
                       </Card>
@@ -141,7 +141,7 @@ const Sbs: React.FC = () => {
                       <Card>
                         <CardContent>
                           <StyledCardContentInner>
-                            <StyledCardTitle>BShare</StyledCardTitle>
+                            <StyledCardTitle>CShare</StyledCardTitle>
                             <StyledExchanger>
                               <StyledToken>
                                 <StyledCardIcon>
@@ -155,10 +155,10 @@ const Sbs: React.FC = () => {
                                 onChange={handleBShareChange}
                                 value={bshareAmount}
                                 max={bshareBalance}
-                                symbol="BShare"
+                                symbol="CShare"
                               ></TokenInput>
                             </Grid>
-                            <StyledDesc>{`${bshareBalance} BSHARE Available in Swapper`}</StyledDesc>
+                            <StyledDesc>{`${bshareBalance} CSHARE Available in Swapper`}</StyledDesc>
                           </StyledCardContentInner>
                         </CardContent>
                       </Card>
@@ -182,7 +182,7 @@ const Sbs: React.FC = () => {
                             onClick={approve}
                             size="medium"
                           >
-                            Approve BBOND
+                            Approve CBOND
                           </Button>
                         ) : (
                           <Button

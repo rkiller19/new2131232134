@@ -109,7 +109,7 @@ const configurations: {[env: string]: Configuration} = {
         CAKE: ['0x130966628846bfd36ff31a822705796e8cb8c18d', 18], //mim
         ZOO: ['0x09e145a1d53c0045f41aeef25d8ff982ae74dd56', 0], //zoo
         SHIBA: ['0x9ba3e4f84a34df4e08c112e1a0ff148b81655615', 9], //shiba
-        'USDT-BNB-LP': ['0x781655d802670bba3c89aebaaea59d3182fd755d', 18], //avax/mim
+        'USDT-BNB-LP': ['0x781655d802670bbA3c89aeBaaEa59D3182fD755D', 18], //avax/mim
         'CREAM': ['0xAE21d31a6494829a9E4B2B291F4984AAE8121757', 18], //icecream
         'CREAM-WAVAX-LP': ['0x00C87ce7188F7652d0C0940274cEC5db62f1e825', 18], //creamavax
         'CSHARE-WAVAX-LP': ['0xbD61dFAd83Fc19960476abca1324FfD798234c66', 18], //share

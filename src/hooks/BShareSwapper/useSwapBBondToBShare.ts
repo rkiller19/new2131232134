@@ -11,7 +11,7 @@ const useSwapBBondToBShare = () => {
   const handleSwapBShare = useCallback(
     (bbondAmount: string) => {
       const bbondAmountBn = parseUnits(bbondAmount, 18);
-      handleTransactionReceipt(bombFinance.swapBBondToBShare(bbondAmountBn), `Swap ${bbondAmount} BBond to BShare`);
+      handleTransactionReceipt(bombFinance.swapBBondToBShare(bbondAmountBn), `Swap ${bbondAmount} CBond to CShare`);
     },
     [bombFinance, handleTransactionReceipt],
   );
