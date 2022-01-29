@@ -146,7 +146,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   return (
     <Card>
       <CardContent>
-        <StyledLink href="https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/" target="_blank">
+        <StyledLink href="https://traderjoexyz.com/pool/AVAX/0xAE21d31a6494829a9E4B2B291F4984AAE8121757" target="_blank">
           <span style={{color: "#fff", textAlign: 'center'}}>Provide liquidity for CREAM-AVAX LP on Joe</span>
         </StyledLink>
       </CardContent>
