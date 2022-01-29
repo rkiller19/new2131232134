@@ -340,7 +340,7 @@ export class BombFinance {
       
 
     const dailyAPR = (totalRewardPricePerDay / totalStakingTokenInPool) * 100;
-
+    console.log(dailyAPR);
     const yearlyAPR = (totalRewardPricePerYear / totalStakingTokenInPool) * 100;
     return {
       dailyAPR: dailyAPR.toFixed(2).toString(),
@@ -402,7 +402,9 @@ export class BombFinance {
     if (depositTokenName.startsWith('CSHARE')) {
       return rewardPerSecond.mul(17000).div(41000);
     } else  if (depositTokenName.startsWith('CREAM-CSHARE')) {
-      return rewardPerSecond.mul(6000).div(41000);
+      return rewardPerSecond.mul(5800).div(41000);
+    } else  if (depositTokenName === 'CREAM') {
+      return rewardPerSecond.mul(200).div(41000);
     } else {
       return rewardPerSecond.mul(18000).div(41000);
     }
@@ -562,7 +564,7 @@ export class BombFinance {
         return await pool.pendingShare(poolId, account);
       }
     } catch (err) {
-      console.error(`Failed to call pendingShare() on pool ${pool.address}: ${err}`);
+      console.error(`Failed to call pendingShare() on pool ${pool.address}: ${err.stack}`);
       return BigNumber.from(0);
     }
   }
@@ -575,7 +577,7 @@ export class BombFinance {
 
       return await userInfo.amount;
     } catch (err) {
-      console.error(`Failed to call userInfo() on pool ${pool.address}: ${err}`);
+      console.error(`Failed to call userInfo() on pool ${pool.address}: ${err.stack}`);
       return BigNumber.from(0);
     }
   }
@@ -721,7 +723,7 @@ export class BombFinance {
     if (!ready) return;
     const {WAVAX} = this.externalTokens;
     try {
-      const btcPriceInBNB = 1;
+      const btcPriceInBNB = await this.getTokenPriceFromPancakeswap(WAVAX)
       
       const wbnbPrice = await this.getWBNBPriceFromPancakeswap();
 
