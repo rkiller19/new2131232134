@@ -51,7 +51,7 @@ const Bank: React.FC = () => {
   return account && bank ? (
     <>
       <PageHeader
-        icon="🏦"
+        icon="🏦" 
         subtitle={`Deposit ${bank?.depositTokenName} and earn ${bank?.earnTokenName}`}
         title={bank?.name}
       />
@@ -147,7 +147,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
     <Card>
       <CardContent>
         <StyledLink href="https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/" target="_blank">
-          <span style={{color: "#000"}}>Provide liquidity for CREAM-AVAX LP on Joe</span>
+          <span style={{color: "#fff", textAlign: 'center'}}>Provide liquidity for CREAM-AVAX LP on Joe</span>
         </StyledLink>
       </CardContent>
     </Card>

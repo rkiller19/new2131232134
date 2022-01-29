@@ -166,14 +166,14 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     sort: 2,
     closedForStaking: false,
   },
-  CreamMimLPRewardPool: {
+  CreamWavaxLPRewardPool: {
     name: 'Earn CREAM with CREAM/AVAX LP',
     poolId: 2,
     sectionInUI: 0,
     contract: 'CreamWavaxLPRewardPool',
     depositTokenName: 'CREAM-WAVAX-LP',
     earnTokenName: 'CREAM',
-    finished: true,
+    finished: false,
     sort: 1,
     closedForStaking: true,
   },
