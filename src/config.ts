@@ -171,7 +171,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     poolId: 2,
     sectionInUI: 0,
     contract: 'CreamWavaxLPRewardPool',
-    depositTokenName: 'CREAM-AVAX-LP',
+    depositTokenName: 'CREAM-WAVAX-LP',
     earnTokenName: 'CREAM',
     finished: false,
     sort: 1,
