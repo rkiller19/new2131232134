@@ -24,7 +24,7 @@ const logosBySymbol: {[title: string]: string} = {
   BSHAREPNG: tShareLogoPNG,
   CREAM: bombLogo,
   BSHARE: tShareLogo,
-  BBOND: tBondLogo,
+  CBOND: tBondLogo,
   WBNB: bnbLogo,
   BOO: bnbLogo,
   SHIBA: bnbLogo,
