@@ -10651,7 +10651,7 @@
     ]
   },
   "Treasury": {
-    "address": "0xE30a5A9A88F44196B4b0212110799c8e34192061",
+    "address": "0x846Be1f75d5497A279Fcf1d9a805cDC873389a25",
     "abi": [
       {
         "anonymous": false,
