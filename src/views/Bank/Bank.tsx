@@ -122,14 +122,12 @@ const Bank: React.FC = () => {
 
 const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   const bombFinance = useBombFinance();
-  const bombAddr = 0xAE21d31a6494829a9E4B2B291F4984AAE8121757;
-  const bshareAddr = 0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7;
 
   let pairName: string;
   let uniswapUrl: string;
   let vaultUrl: string;
   if (bank.depositTokenName.includes('CREAM-WAVAX')) {
-    pairName = 'CREAM-AVAX pair';
+    pairName = 'CREAM-WAVAX pair';
     uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/';
     vaultUrl = '#';
 
@@ -147,7 +145,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
     <Card>
       <CardContent>
         <StyledLink href="https://traderjoexyz.com/pool/AVAX/0xAE21d31a6494829a9E4B2B291F4984AAE8121757" target="_blank">
-          <span style={{color: "#fff", textAlign: 'center'}}>Provide liquidity for CREAM-AVAX LP on Joe</span>
+          <span style={{color: "#fff", textAlign: 'center'}}>Provide liquidity for {pairNAME} LP on Joe</span>
         </StyledLink>
       </CardContent>
     </Card>

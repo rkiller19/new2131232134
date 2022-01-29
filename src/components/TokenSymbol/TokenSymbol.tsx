@@ -24,7 +24,9 @@ const logosBySymbol: {[title: string]: string} = {
   BSHAREPNG: tShareLogoPNG,
   CREAM: bombLogo,
   BSHARE: tShareLogo,
+  BBOND: tBondLogo,
   CBOND: tBondLogo,
+  CSHARE: tShareLogoPNG,
   WBNB: bnbLogo,
   BOO: bnbLogo,
   SHIBA: bnbLogo,
@@ -43,6 +45,7 @@ const logosBySymbol: {[title: string]: string} = {
   'BOMB-BTCB-APELP': bombFtmLpLogo,
   'CREAM-WAVAX-LP' : bombFtmLpLogo,
   'CREAM-CSHARE-LP': creamCshare,
+  'CSHARE-WAVAX-LP': bshareFtmLpLogo,
 };
 
 type LogoProps = {
