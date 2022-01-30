@@ -327,7 +327,7 @@ export class BombFinance {
       bank.depositTokenName,
     );
 
-    const tokenPerHour = tokenPerSecond.mul(60).mul(60);
+    let tokenPerHour = tokenPerSecond.mul(60).mul(60);
     
     const totalRewardPricePerYear =
       Number(stat.priceInDollars) * Number(getDisplayBalance(tokenPerHour.mul(24).mul(365)));
@@ -564,7 +564,7 @@ export class BombFinance {
         return await pool.pendingShare(poolId, account);
       }
     } catch (err) {
-      console.error(`Failed to call pendingShare() on pool ${pool.address}: ${err.stack}`);
+      console.error(`Failed to call pendingShare() on pool ${pool.address}: ${err}`);
       return BigNumber.from(0);
     }
   }
@@ -577,7 +577,7 @@ export class BombFinance {
 
       return await userInfo.amount;
     } catch (err) {
-      console.error(`Failed to call userInfo() on pool ${pool.address}: ${err.stack}`);
+      console.error(`Failed to call userInfo() on pool ${pool.address}: ${err}`);
       return BigNumber.from(0);
     }
   }
