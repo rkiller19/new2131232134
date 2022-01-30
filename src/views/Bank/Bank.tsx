@@ -59,7 +59,7 @@ const Bank: React.FC = () => {
           <Grid item xs={12} sm={12} justify="center" style={{ margin: '12px', display: 'flex' }}>
 
            <Alert variant="filled" severity="info"> 
-              There is a deposit limit of 40 AVAX and 2500 MIM per pool.
+              Stake and get ready for takeoff.
             </Alert>
           </Grid>
         </Grid>

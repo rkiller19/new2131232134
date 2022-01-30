@@ -39,7 +39,7 @@ const StyledTitle = styled.h1`
 const StyledSubtitle = styled.h3`
   color: #fff;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   text-align: center;
