@@ -12656,7 +12656,7 @@
   },
 
   "CshareWavaxLPCshareRewardPool": {
-    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
+    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
     "abi": [
       {
         "inputs": [
@@ -13142,7 +13142,7 @@
     ]
   },
   "CreamWavaxLPCshareRewardPool": {
-    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
+    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
     "abi": [
       {
         "inputs": [
@@ -13628,7 +13628,7 @@
     ]
   },
   "CreamCshareLPCshareRewardPool": {
-    "address": "0x60f3555f64507106508Ee8d3a50E8bCd06FAaAfd",
+    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
     "abi": [
       {
         "inputs": [
