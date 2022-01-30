@@ -131,11 +131,11 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
 
   } else if(bank.depositTokenName.includes('CSHARE-WAVAX')){
     pairName = 'CSHARE-WAVAX pair';
-    uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7#/';
+    uniswapUrl = 'https://traderjoexyz.com/pool/AVAX/0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7';
 
   }else{
     pairName = 'CREAM-CSHARE pair';
-    uniswapUrl = 'https://traderjoexyz.com/pool/';
+    uniswapUrl = 'https://traderjoexyz.com';
   }
   return (
     <Card>
