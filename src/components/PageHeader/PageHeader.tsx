@@ -23,7 +23,7 @@ const StyledPageHeader = styled.div`
   flex-direction: column;
   padding-bottom: ${(props) => props.theme.spacing[6]}px;
   padding-top: ${(props) => props.theme.spacing[6]}px;
-  max-width: 512px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
 `;
@@ -40,6 +40,7 @@ const StyledSubtitle = styled.h3`
   color: #fff;
   font-size: 18px;
   font-weight: 300;
+  font-align: center
   margin: 0;
   padding: 0;
   text-align: center;
