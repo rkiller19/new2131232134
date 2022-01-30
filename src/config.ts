@@ -187,7 +187,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     earnTokenName: 'CSHARE',
     finished: false,
     sort: 0,
-    closedForStaking: true,
+    closedForStaking: false,
   },
   
   CshareAvaxLPCshareRewardPool: {
@@ -199,7 +199,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     earnTokenName: 'CSHARE',
     finished: false,
     sort: 1,
-    closedForStaking: true,
+    closedForStaking: false,
   },
 
   CreamCshareLPCshareRewardPool: {
@@ -211,7 +211,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     earnTokenName: 'CSHARE',
     finished: false,
     sort: 2,
-    closedForStaking: true,
+    closedForStaking: false,
   },
 };
 

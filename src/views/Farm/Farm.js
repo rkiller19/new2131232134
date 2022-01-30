@@ -41,7 +41,7 @@ const Farm = () => {
               
               <Box mt={5}>
               
-               {/* <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
+                <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                 <Typography color="textPrimary" variant="h4" gutterBottom style={{marginTop: '20px', color: '#fff'}}>
                     Cream Reward Farms
                   </Typography>
@@ -79,7 +79,7 @@ const Farm = () => {
                         </React.Fragment>
                       ))}
                   </Grid>
-                    </div> */}
+                    </div>
 
                 <Grid hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
                   
