@@ -179,7 +179,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
   },
 
   CreamAvaxLPCshareRewardPool: {
-    name: 'Earn CREAM with CREAM-AVAX LP',
+    name: 'Earn CSHARE with CREAM/AVAX LP',
     poolId: 0,
     sectionInUI: 2,
     contract: 'CreamWavaxLPCshareRewardPool',
@@ -191,7 +191,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
   },
   
   CshareAvaxLPCshareRewardPool: {
-    name: 'Earn CREAM with CSHARE-AVAX LP',
+    name: 'Earn CSHARE with CSHARE/AVAX LP',
     poolId: 1,
     sectionInUI: 2,
     contract: 'CshareWavaxLPCshareRewardPool',
@@ -203,7 +203,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
   },
 
   CreamCshareLPCshareRewardPool: {
-    name: 'Earn CREAM with CREAM-CSHARE LP',
+    name: 'Earn CSHARE with CREAM/CSHARE LP',
     poolId: 2,
     sectionInUI: 2,
     contract: 'CreamCshareLPCshareRewardPool',

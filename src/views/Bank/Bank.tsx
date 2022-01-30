@@ -59,7 +59,7 @@ const Bank: React.FC = () => {
           <Grid item xs={12} sm={12} justify="center" style={{ margin: '12px', display: 'flex' }}>
 
            <Alert variant="filled" severity="info"> 
-              Stake and get ready for takeoff.
+              Boardroom will be scheduled to launch 12-24h after LP Pools please follow announcements!.
             </Alert>
           </Grid>
         </Grid>
