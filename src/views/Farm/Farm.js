@@ -47,7 +47,7 @@ const Farm = () => {
                   </Typography>
                   <Alert variant="filled" severity="info">             
                      
-                      Cream rewards start Jan 30th 2022 and will continue running for 370 days.
+                      Cream rewards start Jan 29th 2022 @7:30PM PST and will continue running for 370 days.
                   
                   </Alert> 
                   <Grid container spacing={3} style={{marginTop: '20px'}}>
@@ -87,7 +87,7 @@ const Farm = () => {
                     Genesis Pools
                   </Typography>
                   <Alert variant="filled" severity="warning">
-                    Genesis pools will be launching January 28th, 2022 at 2PM PST and will be running for 48 HOURS.
+                    Cream rewards have finished early to keep CREAM above peg, please unstake from these pools. NO REWARDS ARE LOST THEY WILL BE SENT TO YOUR WALLET WHEN YOU UNSTAKE!.
                   </Alert>
                   {/*<Alert variant="filled" severity="warning">
                     Genesis pools have ended. Please claim all rewards and remove funds from Genesis pools.
