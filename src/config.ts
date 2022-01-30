@@ -153,7 +153,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     earnTokenName: 'CREAM',
     finished: false,
     sort: 3,  
-    closedForStaking: false,
+    closedForStaking: true,
   },
   CreamWavaxRewardPool: {
     name: 'Earn Cream with AVAX',
@@ -164,7 +164,7 @@ export const bankDefinitions: {[contractName: string]: BankInfo} = {
     earnTokenName: 'CREAM',
     finished: false,
     sort: 2,
-    closedForStaking: false,
+    closedForStaking: true,
   },
   CreamWavaxLPRewardPool: {
     name: 'Earn CREAM with CREAM/AVAX LP',
