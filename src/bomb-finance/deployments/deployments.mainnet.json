@@ -2100,7 +2100,7 @@
   },
 
   "BshareBnbLPBShareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [
@@ -2605,7 +2605,7 @@
   },
 
   "BombBtcbApeLPBShareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [
@@ -3091,7 +3091,7 @@
     ]
   },
   "BshareBnbApeLPBShareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [
@@ -3577,7 +3577,7 @@
     ]
   },
   "BombBtcbLPBShareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [
@@ -12656,7 +12656,7 @@
   },
 
   "CshareWavaxLPCshareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [
@@ -13142,7 +13142,7 @@
     ]
   },
   "CreamWavaxLPCshareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [
@@ -13628,7 +13628,7 @@
     ]
   },
   "CreamCshareLPCshareRewardPool": {
-    "address": "0x3D392181F7612772C57c5E10eB21Ab75Ee840b97",
+    "address": "0x6CD5a7Acbe8Ddc57C8aC2EE72f3f957e26D81f51",
     "abi": [
       {
         "inputs": [

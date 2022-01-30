@@ -397,7 +397,7 @@ export class BombFinance {
       
     }
 
-    const rewardPerSecond = await poolContract.creamPerSecond();
+    const rewardPerSecond = await poolContract.csharePerSecond();
     
     if (depositTokenName.startsWith('CSHARE')) {
       return rewardPerSecond.mul(17000).div(41000);
