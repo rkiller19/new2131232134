@@ -33,7 +33,7 @@ const Bank: React.FC = () => {
   useEffect(() => window.scrollTo(0, 0));
   const date = new Date('2022-1-28 17:00:00Z');
   const classes = useStyles();
-  const {bankId} = useParams();
+  const { bankId } = useParams();
   const bank = useBank(bankId);
 
   const {account} = useWallet();
@@ -125,21 +125,17 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
 
   let pairName: string;
   let uniswapUrl: string;
-  let vaultUrl: string;
   if (bank.depositTokenName.includes('CREAM-WAVAX')) {
     pairName = 'CREAM-WAVAX pair';
     uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/';
-    vaultUrl = '#';
 
   } else if(bank.depositTokenName.includes('CSHARE-WAVAX')){
     pairName = 'CSHARE-WAVAX pair';
     uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7#/';
-    vaultUrl = '#';
 
   }else{
     pairName = 'CREAM-CSHARE pair';
     uniswapUrl = 'https://traderjoexyz.com/pool/';
-    vaultUrl = '#';
   }
   return (
     <Card>

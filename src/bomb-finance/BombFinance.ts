@@ -327,7 +327,7 @@ export class BombFinance {
       bank.depositTokenName,
     );
 
-    let tokenPerHour = tokenPerSecond.mul(60).mul(60);
+    const tokenPerHour = tokenPerSecond.mul(60).mul(60);
     
     const totalRewardPricePerYear =
       Number(stat.priceInDollars) * Number(getDisplayBalance(tokenPerHour.mul(24).mul(365)));
