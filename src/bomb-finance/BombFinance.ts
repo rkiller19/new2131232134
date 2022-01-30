@@ -397,7 +397,7 @@ export class BombFinance {
       
     }
 
-    const rewardPerSecond = await poolContract.creamPerSecond();
+    const rewardPerSecond = await poolContract.CreamPerSecond();
     
     if (depositTokenName.startsWith('CSHARE')) {
       return rewardPerSecond.mul(17000).div(41000);
@@ -807,7 +807,7 @@ export class BombFinance {
 
   async stakeShareToBoardroom(amount: string): Promise<TransactionResponse> {
     if (this.isOldBoardroomMember()) {
-      throw new Error("you're using old boardroom. please withdraw and deposit the GSHARE again.");
+      throw new Error("you're using old boardroom. please withdraw and deposit the CSHARE again.");
     }
     const Boardroom = this.currentBoardroom();
     return await Boardroom.stake(decimalToBalance(amount));
