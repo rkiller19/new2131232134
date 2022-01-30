@@ -127,7 +127,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   let uniswapUrl: string;
   if (bank.depositTokenName.includes('CREAM-WAVAX')) {
     pairName = 'CREAM-WAVAX pair';
-    uniswapUrl = 'https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/';
+    uniswapUrl = 'https://traderjoexyz.com/pool/AVAX/0xAE21d31a6494829a9E4B2B291F4984AAE8121757';
 
   } else if(bank.depositTokenName.includes('CSHARE-WAVAX')){
     pairName = 'CSHARE-WAVAX pair';
@@ -140,8 +140,8 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   return (
     <Card>
       <CardContent>
-        <StyledLink href="https://traderjoexyz.com/pool/AVAX/0xAE21d31a6494829a9E4B2B291F4984AAE8121757" target="_blank">
-          <span style={{color: "#fff", textAlign: 'center'}}>Provide liquidity for {pairName} LP on Joe</span>
+        <StyledLink href={uniswapUrl} target="_blank">
+          {`🍦 Provide liquidity for ${pairName} now on TraderJoe 🍦`}
         </StyledLink>
       </CardContent>
     </Card>
