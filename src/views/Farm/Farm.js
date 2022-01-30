@@ -43,11 +43,11 @@ const Farm = () => {
               
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                 <Typography color="textPrimary" variant="h4" gutterBottom style={{marginTop: '20px', color: '#fff'}}>
-                    Cream Reward Farms
+                    CSHARE Reward Farms
                   </Typography>
                   <Alert variant="filled" severity="info">             
                      
-                      Cream rewards start Jan 29th 2022 @7:30PM PST and will continue running for 370 days.
+                      CSHARE rewards start Jan 29th 2022 @7:30PM PST and will continue running for 370 days.
                   
                   </Alert> 
                   <Grid container spacing={3} style={{marginTop: '20px'}}>
