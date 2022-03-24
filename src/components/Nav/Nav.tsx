@@ -139,7 +139,7 @@ const Nav = () => {
               </Link>
 
 
-              <a href="https://www.atlantisdefi.com/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
+              <a href="https://www.atlantisapp.xyz/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
                 Docs
               </a>
 
@@ -229,7 +229,7 @@ const Nav = () => {
                 <ListItemLink primary="Creamery" to="/farm" />
                 <ListItemLink primary="Parlour" to="/boardroom" />
                 <ListItemLink primary="Factory" to="/bond" />
-                <ListItem button component="a" href="https://www.atlantisdefi.com/">
+                <ListItem button component="a" href="https://www.atlantisapp.xyz/">
                   <ListItemText>Documents</ListItemText>
                   </ListItem>
                 
