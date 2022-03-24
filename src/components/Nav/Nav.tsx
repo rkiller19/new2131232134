@@ -128,19 +128,19 @@ const Nav = () => {
                 Home
               </Link>
               
-              <Link to="/farm" className={'navLink ' + classes.link}>
-                Creamery
+              <Link to="/" className={'navLink ' + classes.link}>
+                Farm
                 </Link>
-              <Link to="/boardroom" className={'navLink ' + classes.link}>
-                Parlor
+              <Link to="/" className={'navLink ' + classes.link}>
+                Boardroom
+              </Link>
+              <Link to="/" className={'navLink ' + classes.link}>
+                Vaults
               </Link>
 
-              <Link to="/bond" className={'navLink ' + classes.link}>
-                Factory
-              </Link>
 
               <a href="https://icecreamfinancial.gitbook.io/icecream-finance/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
-                Documents
+                Docs
               </a>
 
 

@@ -65,7 +65,7 @@ const Boardroom = () => {
       <BackgroundImage />
       {!!account ? (
         <>
-        <h2 style={{ color:'white', fontSize: '60px', textAlign:'center' }}>Parlor</h2>    
+        
           <Box mt={5}>
             <Grid container justify="center" spacing={3}>
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
@@ -88,7 +88,7 @@ const Boardroom = () => {
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
                     <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>
-                      CREAM PEG <small>(TWAP)</small>
+                      ATLAS PEG <small>(TWAP)</small>
                     </Typography>
                     <Typography>{scalingFactor} AVAX</Typography>
                     
@@ -106,7 +106,7 @@ const Boardroom = () => {
               <Grid item xs={12} md={2} lg={2}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>CSHARES Staked</Typography>
+                    <Typography style={{textTransform: 'uppercase', color: '#2f83d7'}}>ASHARES Staked</Typography>
                     <Typography>{getDisplayBalance(totalStaked)}</Typography>
                   </CardContent>
                 </Card>

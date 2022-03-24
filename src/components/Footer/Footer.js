@@ -46,27 +46,21 @@ const Footer = () => {
             <Typography variant="body2" color="#" align="left">
               {'Copyright © '}
               <Link color="inherit" href="/">
-                IceCream Finance
+                Atlantis Finance
               </Link>{' '}
               {new Date().getFullYear()}
             </Typography>
           </Grid>
           <Grid item xs={6} style={{textAlign: 'right', height: '20px'}}>
             <a
-              href="https://twitter.com/IcecreamFinance"
+              href="https://twitter.com/FinanceAtlantis"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
             >
               <IconTwitter style={{fill: '#fff'}} />
             </a>
-            <a href="https://github.com/icecreamfinancial" rel="noopener noreferrer" target="_blank" className={classes.link}>
-              <IconGithub style={{fill: '#fff', height: '20px'}} />
-            </a>
-            <a href="https://t.me/icecreamfinance" rel="noopener noreferrer" target="_blank" className={classes.link}>
-              <IconTelegram style={{fill: '#fff', height: '20px'}} />
-            </a>
-            <a href="https://discord.gg/icecream" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://discord.gg/vBgCHW6eMP" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <IconDiscord style={{fill: '#fff', height: '20px'}} />
             </a>
           </Grid>

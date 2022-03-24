@@ -37,19 +37,15 @@ const Farm = () => {
           <BackgroundImage />
           {!!account ? (
             <Container maxWidth="lg">
-              <h2 style={{ color:'white', fontSize: '60px', textAlign:'center' }}>Welcome to the Creamery!</h2>             
+                        
               
               <Box mt={5}>
               
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                 <Typography color="textPrimary" variant="h4" gutterBottom style={{marginTop: '20px', color: '#fff'}}>
-                    CSHARE Reward Farms
+                    ASHARE Reward Farms
                   </Typography>
-                  <Alert variant="filled" severity="info">             
-                     
-                      CSHARE rewards start Jan 29th 2022 @7:30PM PST and will continue running for 370 days.
-                  
-                  </Alert> 
+                 
                   <Grid container spacing={3} style={{marginTop: '20px'}}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 2)
@@ -63,11 +59,11 @@ const Farm = () => {
 
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{marginTop: '20px', color: '#fff'}}>
-                    Cream Reward Farms (Now Closed)
+                    ATLAS Reward Farms (Now Closed)
                   </Typography>
                   <Alert variant="filled" severity="warning">             
                      
-                      Cream rewards have finished early to keep CREAM above peg during our bootstrap, please unstake from these pools. NO REWARDS ARE LOST THEY WILL BE SENT TO YOUR WALLET WHEN YOU UNSTAKE!
+                      ATLAS rewards have finished early to keep ATLAS above peg during our bootstrap, please unstake from these pools. NO REWARDS ARE LOST THEY WILL BE SENT TO YOUR WALLET WHEN YOU UNSTAKE!
                   
                   </Alert>
                   <Grid container spacing={3} style={{marginTop: '20px', display: 'flex', alignItems: 'center'}}>
@@ -83,24 +79,12 @@ const Farm = () => {
 
                 <Grid hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
                   
-                  <Typography color="textPrimary" variant="h4" gutterBottom style={{marginTop: '20px', color: '#fff'}}>
-                    Genesis Pools
-                  </Typography>
-                  <Alert variant="filled" severity="warning">
-                    Cream rewards have finished early to keep CREAM above peg, please unstake from these pools. NO REWARDS ARE LOST THEY WILL BE SENT TO YOUR WALLET WHEN YOU UNSTAKE!.
-                  </Alert>
+                  
+                  
                   {/*<Alert variant="filled" severity="warning">
                     Genesis pools have ended. Please claim all rewards and remove funds from Genesis pools.
                       </Alert>*/}
-                  <Grid container spacing={3} style={{marginTop: '20px'}}>
-                    {activeBanks
-                      .filter((bank) => bank.sectionInUI === 0)
-                      .map((bank) => (
-                        <React.Fragment key={bank.name}>
-                          <FarmCard bank={bank} />
-                        </React.Fragment>
-                      ))}
-                  </Grid>
+                 
                 </Grid>
               </Box>
             </Container>

@@ -127,7 +127,7 @@ const LPTokenHelpText: React.FC<{bank: BankEntity}> = ({bank}) => {
   let uniswapUrl: string;
   if (bank.depositTokenName.includes('CREAM-WAVAX')) {
     pairName = 'CREAM-WAVAX pair';
-    uniswapUrl = 'https://traderjoexyz.com/pool/AVAX/0xAE21d31a6494829a9E4B2B291F4984AAE8121757';
+    uniswapUrl = 'https://traderjoexyz.com/pool/AVAX/0x339FdAAf2087266CEC70Bc388437f8FC2c4Ea144';
 
   } else if(bank.depositTokenName.includes('CSHARE-WAVAX')){
     pairName = 'CSHARE-WAVAX pair';

@@ -72,10 +72,9 @@ const Home = () => {
     bShare = bShareProd;
   }
 
-  const buyBombAddress = 'https://traderjoexyz.com/trade?outputCurrency=0xAE21d31a6494829a9E4B2B291F4984AAE8121757#/';
-  const buyBShareAddress = 'https://traderjoexyz.com/trade?outputCurrency=0x155f794b56353533E0AfBF76e1B1FC57DFAd5Bd7#/';
-  const cshareChart = 'https://dexscreener.com/avalanche/0xbd61dfad83fc19960476abca1324ffd798234c66';
-  const creamChart = 'https://dexscreener.com/avalanche/0x00c87ce7188f7652d0c0940274cec5db62f1e825';
+  const buyBombAddress = 'https://traderjoexyz.com/trade?outputCurrency=0x339FdAAf2087266CEC70Bc388437f8FC2c4Ea144#/';
+  const buyBShareAddress = 'https://traderjoexyz.com/trade?outputCurrency=0x0e384E2479Ce6c682288172d7e4724802fcD53Ee#/';
+
 
   const bombLPStats = useMemo(() => (bombFtmLpStats ? bombFtmLpStats : null), [bombFtmLpStats]);
   const bshareLPStats = useMemo(() => (bShareFtmLpStats ? bShareFtmLpStats : null), [bShareFtmLpStats]);
@@ -158,32 +157,24 @@ const Home = () => {
         <Grid item xs={12} sm={8}>
           <Paper>
             <Box p={4} style={{ textAlign: 'center' }}>
-              <h2>Welcome to IceCream Finance</h2>
+              <h2>Welcome to Atlantis Finance</h2>
               <p style={{ fontSize: '17px' }}>
-               <b>$CREAM A next-generation algo stable to cure your sweet-tooth on the Avalanche Network</b>
+               <b>Earn the best yields with our $ATLAS farms</b>
                 
                 
               </p>
               <p style={{ fontSize: '17px' }}>
-              Our inspiration for starting this protocol came from two simple words INTEGRITY and TRANSPARENCY. Starting off as investors ourselves we noticed that DeFi as a whole, 
-              is moving in the wrong direction. Many projects end up either rugging or failing because many dont realize that DeFi's success is built with a strong community. 
-              We plan to stand side by side with our investors through thick and thin and deliver the sweetest protocol to #AVAX.
+              We discovered Tomb Finance a few months ago and really love the way it works. So we decided to create our own Tomb Finance.
+Tomb Finance has made a really great job and we’ve been working on our contracts in a way that won’t kill the mechanics they’ve made. 
+We wanted to bring this project to the right place, that’s why we’ve choose Avalanche as this is one of the greatest Blockchain with a promising future.
                 {/* Stake your BOMB-BTC LP in the Farm to earn BSHARE rewards. Then stake your earned BSHARE in the
                 Boardroom to earn more BOMB! */}
               </p>
               <p>
                 Join our{' '}
-                <a
-                  href="https://t.me/icecreamfinance"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  style={{ color: '#89CFF0' }}
-                >
-                  Telegram
-                </a>{' '} or {' '}
                 
                 <a
-                  href="https://discord.gg/icecream"
+                  href="https://discord.gg/vBgCHW6eMP"
                   rel="noopener noreferrer"
                   target="_blank"
                   style={{ color: '#89CFF0' }}
@@ -192,18 +183,7 @@ const Home = () => {
                 </a>{' '}
                 to find out more!
                 </p>
-                <p style={{ fontSize: '18px' }}>
-                  Our KYC is now complete by Assured DeFi, check out our {' '}
-                <a
-                  href="https://www.assuredefi.io/projects/icecream-finance/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  style={{ color: '#89CFF0' }}
-                >
-                  NFT
-                </a>{' '}
-                for more details!
-                </p>
+                
                 
 
             </Box>
@@ -214,7 +194,7 @@ const Home = () => {
           <Grid item xs={12} sm={12} justify="center" style={{ margin: '12px', display: 'flex' }}>
 
            <Alert variant="filled" severity="info"> 
-              Please read our <a link="_blank" href="https://icecreamfinancial.gitbook.io/icecream-finance/">documentation</a> for more info before purchasing CREAM or CSHARE tokens!.
+              Please read our <a link="_blank" href="https://www.atlantisdefi.com/">documentation</a> for more info before purchasing ATLAS or ASHARE tokens!.
             </Alert>
 
           </Grid>
@@ -248,7 +228,7 @@ const Home = () => {
                 style={{ margin: '10px' }}
                 className={'shinyButton ' + classes.button}
               >
-                Buy CREAM
+                Buy ATLAS
               </Button>
               <Button
                 target="_blank"
@@ -256,24 +236,10 @@ const Home = () => {
                 className={'shinyButton ' + classes.button}
                 style={{ margin: '10px' }}
               >
-                Buy CSHARE
+                Buy ASHARE
               </Button>
-              <Button
-                target="_blank"
-                href={creamChart}
-                className={'shinyButton ' + classes.button}
-                style={{ margin: '10px' }}
-              >
-                CREAM Chart
-              </Button>
-              <Button
-                target="_blank"
-                href={cshareChart}
-                className={'shinyButton ' + classes.button}
-                style={{ margin: '10px' }}
-              >
-                CSHARE Chart
-              </Button>
+             
+              
             </CardContent>
           </Card>
         </Grid>
@@ -283,18 +249,8 @@ const Home = () => {
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
               <Box mt={2}>
-              <h2 style={{ marginBottom: '10px' }}>CREAM</h2>
+              <h2 style={{ marginBottom: '10px' }}>ATLAS</h2>
               </Box>
-              <Button
-                onClick={() => {
-                  bombFinance.watchAssetInMetamask('BOMB');
-                }}
-                style={{ position: 'absolute', top: '10px', right: '10px', border: 'transparent', color: 'white' }}
-              >
-                {' '}
-                <b>+</b>&nbsp;&nbsp;
-                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(0%)' }} src={MetamaskFox} />
-              </Button>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BOMB" />
@@ -321,18 +277,8 @@ const Home = () => {
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
             <Box mt={2}>
-              <h2 style={{ marginBottom: '10px' }}>CSHARE</h2>
+              <h2 style={{ marginBottom: '10px' }}>ASHARE</h2>
               </Box>
-              <Button
-                onClick={() => {
-                  bombFinance.watchAssetInMetamask('BSHARE');
-                }}
-                style={{ position: 'absolute', top: '10px', right: '10px', border: 'transparent', color: 'white' }}
-              >
-                {' '}
-                <b>+</b>&nbsp;&nbsp;
-                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(0%)' }} src={MetamaskFox} />
-              </Button>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BSHARE" />
@@ -359,18 +305,8 @@ const Home = () => {
           <Card>
             <CardContent align="center" style={{ position: 'relative' }}>
             <Box mt={2}>
-              <h2 style={{ marginBottom: '10px' }}>CBOND</h2>
+              <h2 style={{ marginBottom: '10px' }}>ABOND</h2>
               </Box>
-              <Button
-                onClick={() => {
-                  bombFinance.watchAssetInMetamask('BBOND');
-                }}
-                style={{ position: 'absolute', top: '10px', right: '10px', border: 'transparent', color: 'white' }}
-              >
-                {' '}
-                <b>+</b>&nbsp;&nbsp;
-                <img alt="metamask fox" style={{ width: '20px', filter: 'grayscale(0%)' }} src={MetamaskFox} />
-              </Button>
               <Box mt={2}>
                 <CardIcon>
                   <TokenSymbol symbol="BBOND" />
@@ -396,7 +332,7 @@ const Home = () => {
           <Card>
             <CardContent align="center">
             <Box mt={2}>
-              <h2 style={{ marginBottom: '10px' }}>CREAM-AVAX LP</h2>
+              <h2 style={{ marginBottom: '10px' }}>ATLAS-AVAX LP</h2>
               </Box>
               <Box mt={2}>
                 <CardIcon>
@@ -429,7 +365,7 @@ const Home = () => {
           <Card>
             <CardContent align="center">
             <Box mt={2}>
-              <h2 style={{ marginBottom: '10px' }}>CSHARE-AVAX LP</h2>
+              <h2 style={{ marginBottom: '10px' }}>ASHARE-AVAX LP</h2>
               </Box>
               <Box mt={2}>
                 <CardIcon>
@@ -462,7 +398,7 @@ const Home = () => {
           <Card>
             <CardContent align="center">
             <Box mt={2}>
-              <h2 style={{ marginBottom: '10px' }}>CREAM-CSHARE LP</h2>
+              <h2 style={{ marginBottom: '10px' }}>ATLAS-CSHARE LP</h2>
               </Box>
               <Box mt={2}>
                 <CardIcon>
