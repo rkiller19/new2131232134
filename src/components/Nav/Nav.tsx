@@ -139,7 +139,7 @@ const Nav = () => {
               </Link>
 
 
-              <a href="https://icecreamfinancial.gitbook.io/icecream-finance/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
+              <a href="https://www.atlantisdefi.com/" className={'navLink ' + classes.link} rel="noopener" target="_blank">
                 Docs
               </a>
 
